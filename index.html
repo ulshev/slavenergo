@@ -12,15 +12,17 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css"  media="all" href="css/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css"  media="all" href="css/font.css">
-	
+    
 	    <link rel="stylesheet" type="text/css"  media="all" href="css/ModalWindow.css" /><!-- !!! стили не подключать -->
-	
+    
     <link rel="stylesheet" type="text/css"  media="all" href="template_styles.css">
-	
+    
     <script type="text/Javascript" src="js/jquery-1.12.1.min.js"></script>
     <script type="text/Javascript" src="js/jquery-ui-1.12.1.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/zoomsl-3.0.min.js"></script>
+    <script type="text/javascript" src="js/plaxmove.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script> 
 </head>
 <body id="index"><!-- id=index должен быть только на главной странице -->
@@ -34,9 +36,7 @@
 	
 	<header id="header">
 	    <div class="in">
-		
 		<a class="button" href="#">Форма для связи</a>
-		
 		
 		<div class="header_cont">
 		    <div id="search">
@@ -228,47 +228,447 @@
 		<div class="letters"><img src="images/letters.png" alt=""></div>
 		<div class="image">
 		    <img src="images/main_screen_img.png" alt="">
+		    <div class="lightning1"></div>
+		    <div class="lightning2"></div>
+		    <div class="lightning3"></div>
 		</div>
 		<div class="text">
-		    <h1>Повышение качества электроэнергии</h1>
+		    <h2>Повышение качества электроэнергии</h2>
 		    <p>Электротехническая компания «СлавЭнерго» находится в числе лидеров российского рынка по реализации проектов повышения</p>
 		    <a href="#" class="button">Оставить заявку</a>
 		</div>
-		
+		<a id="go" href="#products"></a>
 	    </div>
 	</div>
 	<!-- end Главный экран -->
 	
-	
-	<!--  -->
-	<div class="main_section" id="advantages">
+	<!-- Продукция -->
+	<div class="main_section" id="production">
 	    <div class="in">
-		<div class="advantages">
-		    <div class="adv_item">
-			<div class="num">01</div>
-			<div class="h3">низкие <span class="light">цены</span></div>
-			<p>на <strong>10%</strong> ниже, чем на рынке</p>
+		<h1>H1 Продукция электротехнического завода</h1>
+		<a href="catalog.html" class="all_link">Вся продукция</a>
+		
+		<div class="production_slider">
+		    <h2>H2 Продукция</h2>
+		    <div class="production_menu">
+			<div class="prod_menu_item">
+			    Высоковольтные трансформаторы
+			</div>
+			<div class="prod_menu_item">
+			    Низковольтные трансформаторы
+			</div>
+			<div class="prod_menu_item">
+			    Токоограничивающие реакторы
+			</div>
+			<div class="prod_menu_item">
+			    Высоковольтные конденсаторные установки
+			</div>
+			<div class="prod_menu_item">
+			    Низковольтные конденсаторные установки
+			</div>
 		    </div>
-		    <div class="adv_item">
-			<div class="num">02</div>
-			<div class="h3">высокое <span class="light">качество</span></div>
-			<p>используем сырье высшего уровня</p>
+		    <div class="production_more">
+			<div class="prod_more_item">
+			    <h3>Высоковольтные трансформаторы</h3>
+			    <a href="#" class="button">Перейти в раздел</a>
+			    <div class="img">
+				<img src="images/product_img1.png" alt="">
+			    </div>
+			    <ul class="advantages">
+				<li>Kачественные комплектующие</li>
+				<li>Индивидуальная защита</li>
+				<li>Контроль качества</li>
+				<li>Международные стандарты</li>
+			    </ul>
+			</div>
+			<div class="prod_more_item">
+			    <h3>Низковольтные трансформаторы</h3>
+			    <a href="#" class="button">Перейти в раздел</a>
+			    <div class="img">
+				<img src="images/product_img2.png" alt="">
+			    </div>
+			    <ul class="advantages">
+				<li>Kачественные комплектующие</li>
+				<li>Индивидуальная защита</li>
+				<li>Контроль качества</li>
+				<li>Международные стандарты</li>
+			    </ul>
+			</div>
+			<div class="prod_more_item">
+			    <h3>Токоограничивающие реакторы</h3>
+			    <a href="#" class="button">Перейти в раздел</a>
+			    <div class="img">
+				<img src="images/product_img3.png" alt="">
+			    </div>
+			    <ul class="advantages">
+				<li>Kачественные конденсаторные установки</li>
+				<li>Индивидуальная защита</li>
+				<li>Контроль качества</li>
+				<li>Международные стандарты</li>
+			    </ul>
+			</div>
+			<div class="prod_more_item">
+			    <h3>Высоковольтные конденсаторные установки</h3>
+			    <a href="#" class="button">Перейти в раздел</a>
+			    <div class="img">
+				<img src="images/product_img4.png" alt="">
+			    </div>
+			    <ul class="advantages">
+				<li>Kачественные комплектующие</li>
+				<li>Индивидуальная защита</li>
+				<li>Контроль качества</li>
+				<li>Международные стандарты</li>
+			    </ul>
+			</div>
+			<div class="prod_more_item">
+			    <h3>Низковольтные конденсаторные установки</h3>
+			    <a href="#" class="button">Перейти в раздел</a>
+			    <div class="img">
+				<img src="images/product_img5.png" alt="">
+			    </div>
+			    <ul class="advantages">
+				<li>Kачественные комплектующие</li>
+				<li>Индивидуальная защита</li>
+				<li>Контроль качества</li>
+				<li>Международные стандарты</li>
+			    </ul>
+			</div>
 		    </div>
-		    <div class="adv_item">
-			<div class="num">03</div>
-			<div class="h3">обширный <span class="light">опыт</span></div>
-			<p>более <strong>10 лет</strong> на рынке</p>
+		</div>
+		
+		
+		
+		<div class="production_menu_mob mob"><!-- этот блок отображается при ширине менее 600рх вместо слайдера -->
+		    <ul>
+			<li><a href="#"><img src="images/icon_prod_mob1.png" alt=""> Высоковольтные трансформаторы</a></li>
+			<li><a href="#"><img src="images/icon_prod_mob2.png" alt=""> Низковольтные трансформаторы</a></li>
+			<li><a href="#"><img src="images/icon_prod_mob3.png" alt=""> Высоковольтные конденсаторные установки</a></li>
+			<li><a href="#"><img src="images/icon_prod_mob4.png" alt=""> Низковольтные конденсаторные установки</a></li>
+			<li><a href="#"><img src="images/icon_prod_mob5.png" alt=""> Токоограничивающие реакторы</a></li>
+		    </ul>
+		</div>
+		
+		<div class="poll"><a href="#">Опросный лист <span>online</span></a></div>
+	    </div>
+	</div>
+	<!-- end Продукция -->
+	
+	
+	<!-- Акции -->
+	<div class="main_section" id="promotions">
+	    <div class="in">
+		<a href="promotions.html" class="all_link">Все акции</a>
+		<h2>Акции</h2>
+		
+		<div class="promotions_block slider">
+		    <div class="promotions_images">
+			<div class="promotions_img">
+			    <img src="images/photo1.jpg" alt="">
+			</div>
+			<div class="promotions_img">
+			    <img src="images/photo1.jpg" alt="">
+			</div>
+			<div class="promotions_img">
+			    <img src="images/photo1.jpg" alt="">
+			</div>
 		    </div>
-		    <div class="adv_item">
-			<div class="num">04</div>
-			<div class="h3">особый <span class="light">подход</span></div>
-			<p>производство дымоходов под заказ</p>
+		    <div class="promotions_more">
+			<div class="promotions_more_item">
+			    <h3>Токоограничивающие реакторы РТОС, РТСТ 6-220 кВ</h3>
+			    <div class="text">
+				<time>дата окончания 13.01</time>
+				<p>Токоограничивающие реакторы изготавливаются из прямоугольного провода АППТСД со стекловолокнистой и полиимидной изоляцией. В процессе намотки в несколько жил применяется транспонирование проводов для обеспечения равного контакта всех жил с магнитным полем рассеивания и равномерной плотности тока в реакторе.</p>
+				<a href="#">Перейти в раздел</a><br>
+				<a href="#" class="button">Заказать</a>
+			    </div>
+			</div>
+			<div class="promotions_more_item">
+			    <h3>Трансформаторы трёхфазные серий ТСЗГЛ, ТСЗН</h3>
+			    <div class="text">
+				<time>дата окончания 13.01</time>
+				<p>Токоограничивающие реакторы изготавливаются из прямоугольного провода АППТСД со стекловолокнистой и полиимидной изоляцией. В процессе намотки в несколько жил применяется транспонирование проводов для обеспечения равного контакта всех жил с магнитным полем рассеивания и равномерной плотности тока в реакторе.</p>
+				<a href="#">Перейти в раздел</a><br>
+				<a href="#" class="button">Заказать</a>
+			    </div>
+			</div>
+			<div class="promotions_more_item">
+			    <h3>Вводно-распределительные устройства (ВРУ)</h3>
+			    <div class="text">
+				<time>дата окончания 13.01</time>
+				<p>Токоограничивающие реакторы изготавливаются из прямоугольного провода АППТСД со стекловолокнистой и полиимидной изоляцией. В процессе намотки в несколько жил применяется транспонирование проводов для обеспечения равного контакта всех жил с магнитным полем рассеивания и равномерной плотности тока в реакторе.</p>
+				<a href="#">Перейти в раздел</a><br>
+				<a href="#" class="button">Заказать</a>
+			    </div>
+			</div>
 		    </div>
 		</div>
 	    </div>
 	</div>
-	<!-- end -->
+	<!-- end Акции -->
 	
+	
+	<!-- О заводе -->
+	<div class="main_section" id="about">
+	    <div class="in">
+		<div class="text">
+		    <h2>H2 Завод-изготовитель «СлавЭнерго»</h2>
+		    <p>Электротехническая компания «СлавЭнерго» находится в числе лидеров российского рынка по реализации проектов повышения качества электроэнергии и внедрению надежного распределительного оборудования в сети. Высокое качество продукции, выгодные цены и условия работы позволили компании приобрести множество постоянных клиентов в России и ближнем зарубежье. Предприятие располагает несколькими цехами по производству сухих силовых трансформаторов и электрощитового оборудования (конденсаторные установки, вводно-распределительные устройства, фильтры гармоник).</p>
+		    <a href="#" class="button">Перейти в раздел</a>
+		</div>
+		<div class="about_facts">
+		    <div class="img"><img id="lens_img" src="images/about_image.png" alt=""></div>
+		    <ul class="facts left">
+			<li><span>Профессиональная консультация</li>
+			<li><span>Оперативный сервис</span></li>
+			<li><span>Спецподдержка постоянных партнеров</span></li>
+			<li><span>Невысокие сроки изготовления</span></li>
+		    </ul>
+		    <ul class="facts right">
+			<li><span>Высокое качество</span></li>
+			<li><span>Гарантия</span></li>
+			<li><span>Отлаженный производственный процесс</span></li>
+			<li><span>Более 10 лет опыта</span></li>
+		    </ul>
+		</div>
+		
+		<div class="poll"><a href="#">Опросный лист <span>online</span></a></div>
+	    </div>
+	</div>
+	<!-- end О заводе -->
+	
+	
+	
+	<!-- Клиенты -->
+	<div class="main_section" id="clients">
+	    <div class="in">
+		<div class="text">
+		    <h2>Клиенты</h2>
+		</div>
+		<div class="clients_slider">
+		    <div class="client_item">
+			<img src="images/client1.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client2.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client3.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client4.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client5.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client1.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client2.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client3.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client4.png" alt="">
+		    </div>
+		    <div class="client_item">
+		        <img src="images/client5.png" alt="">
+		    </div>
+	        </div>
+		
+	    </div>
+	</div>
+	<!-- end Клиенты -->
+	
+	
+	<!-- География поставок -->
+	<div class="main_section" id="delivery_map">
+	    <div class="in">
+		<div class="text">
+		    <h2>География поставок</h2>
+		    <p>Информация по доставке конденсаторных установок, ВРУ и трансформаторов в города России (кликните по соответствующему региону)</p>
+		    <ul class="cities">
+			<li id="moscow">Москва</li>
+			<li id="petersburg">Санкт-Петербург</li>
+			<li id="ekaterinburg">Екатеринбург</li>
+			<li id="rostov-on-don">Ростов-на-Дону</li>
+		    </ul>
+		    <a href="#" class="button">Подробнее</a>
+		</div>
+		
+	    </div>
+		
+	    <div class="cities_map">
+		<ul class="cities">
+		    <li id="moscow_point">Москва</li>
+		    <li id="petersburg_point">Санкт-Петербург</li>
+		    <li id="ekaterinburg_point">Екатеринбург</li>
+		    <li id="rostov-on-don_point">Ростов-на-Дону</li>
+		</ul>
+	    </div>
+	</div>
+	<!-- end География поставок -->
+	
+	
+	<!-- Текстовый блок -->
+	<div class="main_section" id="text_block">
+	    <div class="in">
+		<div class="image">
+		    <img class="layer1" src="images/text_block_bg1.png" alt="">
+		    <img class="layer2" src="images/text_block_bg2.png" alt="">
+		    <div id="parallax"><img class="layer3" src="images/text_block_bg3.png" alt=""></div> 
+		</div>
+		<script>
+
+		</script>
+		
+		<div class="text">
+		    <h2>Текст для СЕО</h2>
+		    <p>Электротехническая компания «СлавЭнерго» находится в числе лидеров российского рынка по реализации проектов повышения качества электроэнергии и внедрению надежного распределительного оборудования в сети. Высокое качество продукции, выгодные цены и условия работы позволили компании приобрести множество постоянных клиентов в России и ближнем зарубежье. Предприятие располагает несколькими цехами по производству сухих силовых трансформаторов и электрощитового оборудования (конденсаторные установки, вводно-распределительные устройства, фильтры гармоник).</p>
+		</div>
+		
+	    </div>
+	</div>
+	<!-- end Текстовый блок -->
+	
+	
+	<!-- Форма -->
+	<div class="main_section" id="main_form">
+	    <div class="in">
+		<div class="text">
+		    <h2>Остались вопросы?</h2>
+		    <p>Остались вопросы? Напишите нам! Наша команда всегда рада вам помочь. Если у вас возникли какие-либо вопросы, мы готовы на них ответить.</p>
+		    <div class="poll"><a href="#">Опросный лист <span>online</span></a></div>
+		</div>
+		
+		<div class="form_block">
+		    <form method="post">
+			<div class="uFormLine">
+			    <div class="uError"></div>
+			    <input type="text" value="" placeholder="Ф.И.О">
+			</div>
+			<div class="uFormLine">
+			    <div class="uError"></div>
+			    <input type="text" value="" placeholder="Телефон">
+			</div>
+			<div class="uFormLine">
+			    <div class="uError"></div>
+			    <input type="text" value="" placeholder="E-mail">
+			</div>
+			<div class="uFormLine">
+			    <div class="uError"></div>
+			    <input type="text" value="" placeholder="Название компании">
+			</div>
+			<div class="uFormLine">
+			    <div class="uError"></div>
+			    <textarea placeholder="Сообщение"></textarea>
+			</div>
+			<div class="uFormLine">
+			    <div class="uError" value=""></div>
+			    <input type="file">
+			</div>
+			<div class="feedback-form-bot">
+			    <div class="feedback-form-bot-consent">
+				<div class="order-form-bot-check">
+				    <input type="checkbox" id="123" name="personalInfo" data-required="Y" value="Y" checked="">
+				    <label for="123">Я согласен(а) на обработку <a href="/personal-info/" target="_blank" rel="nofollow noopener">персональных данных</a></label>
+              			</div>
+            		    </div>
+			</div>
+			<div class="uFormGlobalErrors"></div>
+			<div class="uFormButton">
+			    <button type="submit" class="uFormSubmit">Отправить</button>
+			</div>
+		    </form>
+		</div>
+	    </div>	
+	</div>
+	<!-- end Форма -->
+
+	
+	
+	
+	<!-- подвал -->
+	<div id="pre_foo"></div>
+	<footer id="footer">
+	    <div class="in">
+		<div class="foo_logo foo_top foo_left">
+		    <img src="images/logo.png" alt="СлавЭнерго">
+		</div>
+		
+		<div class="foo_left foo_address">
+		    <div class="h5">Адрес центрального офиса:</div>
+		    <div class="address">
+			<p>150000, г. Ярославль, ул. Трефолева, 24а, 3 этаж, офис № 13, торгово-офисный центр "Казанский" (центр города)</p>
+			<a class="map_link" href="#">Посмотреть на карте</a>
+		    </div>
+		</div>
+		
+		<div class="foo_top">
+		    <div class="tel">
+			<span>Бесплатные звонки по России!</span>
+			<a href="tel:88005552023">8-800-555-20-23</a>
+		    </div>
+		    <div class="tel">
+			<span>Многоканальный</span>
+			<a href="tel:+74852648596">+7(4852) 64-85-96</a>
+		    </div>
+		    <div class="mail">
+			<span>E-mail:</span>
+			<a href="mailto:info@slavenergo.ru">info@slavenergo.ru</a>
+		    </div>
+		</div>
+		
+		<div class="foo_menu">
+		    <ul>
+			<li>
+			    <a href="about.html">О заводе</a>
+			</li>
+			<li>
+			    <a href="services.html">Услуги</a>
+			</li>
+			<li>
+			    <a href="delivery.html">Доставка</a>
+			</li>
+			<li>
+			    <a href="promotions.html">Акции</a>
+			</li>
+			<li>
+			    <a href="reviews.html">Отзывы</a>
+			</li>
+			<li>
+			    <a href="contacts.html">Контакты</a>
+			</li>
+		    </ul>
+		</div>
+		
+		<div class="foo_menu foo_submenu">
+		    <div class="h5"><a href="catalog.html">Продукция</a></div>
+		    <ul>
+			<li><a href="vysokovoltnyye_transformatory.html">Высоковольтные трансформаторы</a></li>
+			<li><a href="catalog_level2.html">Низковольтные трансформаторы</a></li>
+			<li><a href="catalog_level2.html">Токоограничивающие реакторы</a></li>
+			<li><a href="catalog_level2.html">Высоковольтные конденсаторные установки</a></li>
+			<li><a href="catalog_level2.html">Низковольтные конденсаторные установки</a></li>
+		    </ul>
+		</div>
+		
+		<div class="foo_presentation h5">
+		    <a href="#">Презентация высоковольтных трансформаторов</a>
+		</div>
+		
+		<div class="foo_text">
+		    <p>Оставьте свои данные и наш менеджер свяжется с вами в ближайшее время.</p>
+		    <a href="#" class="button">Форма для связи</a>
+		</div>
+		
+		<div id="copy">
+		    &copy; 2010 - 2019 ООО СлавЭнерго
+		</div>
+	    </div>
+	</footer>
+	<!-- end подвал -->
 	
     </div>
 </body>

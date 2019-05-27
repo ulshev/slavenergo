@@ -31,7 +31,7 @@
 }
 
 #header {
-    height: 119px;
+    height: 125px;
     width: 100%;
     position: relative;
     top: 0;
@@ -67,7 +67,7 @@
     .button {
 	float: right;
 	margin-left: 50px;
-	margin-bottom: 11px;
+	margin-bottom: 0px;
     }
     
 
@@ -274,7 +274,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	left: 0px;
-	top: 34px;
+	top: 36px;
 	opacity: 0;
 	@include transition(all);
 	font-family: $font_family_alt;
@@ -406,6 +406,7 @@
 	font-size: 40px;
     }
     #header {
+	height: 116px;
 	.in {
 	    padding: 11px 84px;
 	}
@@ -510,6 +511,7 @@
 	}
     }
     #header {
+	height: 70px;
 	.in {
 	    padding: 11px 30px;
 	}
@@ -759,6 +761,7 @@
     }
     
     #header {
+	height: 50px;
 	.in {
 	    padding: 11px;
 	}
@@ -825,7 +828,7 @@
     width: 69px;
     height: 100%;
     background: #4b4b4f;
-    box-shadow: 0 0 20px 13px rgba(0, 0, 0, 0.82);
+    box-shadow: 0 0 20px 13px rgba(0, 0, 0, 0.42);
     box-sizing: border-box;
     padding-top: 147px;
     color: #fff;
@@ -834,10 +837,24 @@
     &:hover {
 	width: 406px;
     }
-    
-    &:before {
+    &:after {
 	content: "";
-	position: absolute;
+	position: relative;
+	display: block;
+	background: #1e1d20;
+	width: 69px;
+	height: 100%;
+	left: 0;
+	//top: 0;
+	z-index: 10;
+    }
+    
+    > ul {
+	position: relative;
+    }
+    ul:before {
+	content: "";
+	position: fixed;
 	background: #1e1d20;
 	width: 69px;
 	height: 100%;
@@ -845,13 +862,9 @@
 	top: 0;
     }
     
-    ul {
-	position: absolute;
-    }
-    
     >ul:after {
 	content: "";
-	right: 0px;
+	right: 150%;
 	position: absolute;
 	width: 337px;
 	height: 300px;
@@ -876,7 +889,16 @@
 	}
     }
     
+    li.calculate {
+	.title {
+	    padding-right: 20px;
+	}
+    }
+    
     &:hover {
+	>ul:after {
+	    right: 0px;
+	}
 	li .title {
 	    margin-left: 0;
 	}
@@ -910,7 +932,7 @@
 	    height: 100%;
 	    left: 0;
 	    top: 0;
-	    z-index: 1;
+	    z-index: 2;
 	}
 	
 	.icon {
@@ -918,7 +940,7 @@
 	    top: 50%;
 	    left: 16px;
 	    margin-top: -22px;
-	    z-index: 2;
+	    z-index: 3;
 	    
 	    img {
 		@include transition(all);
@@ -948,6 +970,10 @@
 	}
     }
     
+    .button {
+	z-index: 1;
+	width: 210px;
+    }
     
     &:hover > ul {
 	> li:not(.calculate) > a, li.calculate {
@@ -965,7 +991,7 @@
 	background: #818288;
 	@include transition(all);
 	overflow-y: hidden;
-	box-shadow: 20px 0px 20px -13px rgba(0, 0, 0, 0.82);
+	box-shadow: 20px 0px 20px -13px rgba(0, 0, 0, 0.42);
 	
 	//display: none;
 	
@@ -976,7 +1002,7 @@
 	    position: absolute;
 	    left: -1px;
 	    top: 0;
-	    box-shadow: 0 0 20px 13px rgba(0, 0, 0, 0.82);
+	    box-shadow: 0 0 20px 13px rgba(0, 0, 0, 0.42);
 	    z-index: 3;
 	}
 	&:before {
@@ -998,12 +1024,6 @@
 		background: #b3b4b8;
 	    }
 	}
-	
-	&:hover {
-	    a {
-		//padding: 20px 42px 20px ;
-	    }
-	}
     }
     
     li:hover ul {
@@ -1013,6 +1033,16 @@
     a {
 	color: #fff;
 	
+    }
+    
+    &.scroll {
+	padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #left_menu {
+	display: none;
     }
 }
 

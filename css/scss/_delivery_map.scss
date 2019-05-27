@@ -1,0 +1,274 @@
+/* start delivery_map styles */ 
+
+#delivery_map {
+    //background: #b9b7ba; //url(images/clients_bg.jpg) no-repeat center top / cover;
+    overflow: hidden;
+    height: 847px;
+    
+    .in {
+	padding-top: 1px;
+	padding-bottom: 1px;
+    }
+    
+    .text {
+	float: left;
+	width: 370px;
+	margin-top: 251px;
+	position: relative;
+	z-index: 3;
+	
+	.cities {
+	    column-count: 2;
+	    column-gap: 70px;
+	    margin-bottom: 27px;
+	    font-weight: 600;
+	}
+    }
+    
+    h2 {
+	margin-bottom: 41px;
+    }
+}
+
+.cities_map {
+    background: #ebebeb url(images/cities_map2.png) no-repeat right bottom / auto 100%;
+    height: 847px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1920px;
+    //opacity: 0.5;
+    
+    .cities {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	bottom: 0;
+	
+	li {
+	    position: absolute;
+	    width: 66px;
+	    height: 66px;
+	    background:  url(images/city_point.png) no-repeat right bottom / auto 100%;
+	    color: transparent;
+	    //overflow: hidden;
+	    text-indent: -10000px;
+	    
+	    &#moscow_point {
+		bottom: 34.9%;
+		right: 40.7%;
+	    }
+	    &#petersburg_point {
+		bottom: 46.3%;
+		right: 40.75%;
+	    }
+	    &#ekaterinburg_point {
+		bottom: 48.9%;
+		right: 25.25%;
+	    }
+	    &#rostov-on-don_point {
+		bottom: 22.15%;
+		right: 36.9%;
+	    }
+	    
+	    &:before {
+		content: '';
+		position: absolute;
+		background: no-repeat right bottom / auto 100%;
+	    }
+	    
+	    &#moscow_point {
+		&:before {
+		    display: none;
+		}
+	    }
+	    &#petersburg_point {
+		&:before {
+		    width: 22px;
+		    height: 75px;
+		    bottom: -89%;
+		    right: 92%;
+		    background-image:  url(images/city_way1.png);
+		}
+	    }
+	    &#ekaterinburg_point {
+		&:before {
+		    width: 244px;
+		    height: 87px;
+		    bottom: -122%;
+		    right: 87%;
+		    background-image:  url(images/city_way3.png);
+		}
+	    }
+	    &#rostov-on-don_point {
+		&:before {
+		    width: 44px;
+		    height: 65px;
+		    bottom: 102%;
+		    right: 44%;
+		    background-image:  url(images/city_way2.png);
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    
+    .cities_map {
+	right: -225px;
+	bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    #delivery_map {
+	height: 743px;
+	
+	.text {
+	    width: 360px;
+	    margin-top: 207px;
+	    line-height: 30px;
+	    
+	    .cities {
+		column-count: 2;
+		column-gap: 80px;
+		margin-bottom: 25px;
+	    }
+	}
+	h2 {
+	    margin-bottom: 32px;
+	}
+    }
+    
+    .cities_map {
+	right: -325px;
+	bottom: -51px;
+	transform: scale(0.88);
+    }
+}
+@media screen and (max-width: 1200px) {
+    #delivery_map {
+	height: 700px;
+	
+	.text {
+	    margin-top: 107px;
+	}
+    }
+    
+    .cities_map {
+	right: -475px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #delivery_map {
+	height: 600px;
+	
+	.text {
+	    width: 55%;
+	    margin-top: 57px;
+	    .cities {
+		column-count: 1;
+		column-gap: 0px;
+	    }
+	}
+	h2 {
+	    margin-bottom: 25px;
+	}
+    }
+    
+    .cities_map {
+	right: -525px;
+	bottom: -124px;
+	transform: scale(0.75);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #delivery_map {
+	height: 500px;
+	
+	.text {
+	    width: 50%;
+	    margin-top: 30px;
+	    line-height: 25px;
+	    .cities {
+		margin-bottom: 15px;
+	    }
+	    p{
+		margin-bottom: 10px;
+	    }
+	}
+	
+	h2 {
+	    margin-bottom: 15px;
+	}
+    }
+    
+    .cities_map {
+	right: -600px;
+	bottom: -185px;
+	transform: scale(0.6);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #delivery_map {
+	padding-bottom: 380px;
+	height: auto;
+	
+	.text {
+	    float: none;
+	    //text-align: center;
+	    padding-top: 0;
+	    width: auto;
+	    line-height: 24px;
+	    padding-bottom: 42px;
+	    //background: #fff;
+	    .cities {
+		column-count: 2;
+		column-gap: 35px;
+		margin-bottom: 25px;
+	    }
+	}
+	h2 {
+	    margin-bottom: 9px;
+	}
+    }
+    
+    .cities_map {
+	transform: scale(0.45);
+	bottom: -235px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #delivery_map {
+	padding-bottom: 320px;
+    }
+    
+    .cities_map {
+	transform: scale(0.38);
+	bottom: -265px;
+	right: -650px;
+	//opacity: 0.5;
+	//background-position: center;
+	//background-size: contain;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #delivery_map {
+	padding-bottom: 210px;
+    }
+    
+    .cities_map {
+	transform: scale(0.25);
+	bottom: -320px;
+	right: -750px;
+    }
+}
+
+/* end delivery_map styles */

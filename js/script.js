@@ -7,6 +7,20 @@ $(document).ready(function() {
 	    $(this).attr('placeholder',$(this).data('placeholder'));
 	});
 	
+	
+	$("#lens_img").imagezoomsl({
+		
+	    innerzoommagnifier: true,
+	    classmagnifier: window.external ? window.navigator.vendor === "Yandex" ? "" : "round-loupe" : "",
+	    magnifierborder: "0px solid #F0F0F0",                               // fix для Opera, Safary, Yandex		  
+	    zoomrange: [1.5, 2],
+	    scrollspeedanimate: 2,
+	    zoomspeedanimate:3,
+	    zoomstart: 1.5,
+	    magnifiersize: [180, 180],
+	});
+	
+	
 	// вверх
 	$(window).scroll(function() {
 	    if($(this).scrollTop() != 0) {
@@ -15,14 +29,11 @@ $(document).ready(function() {
 		$('#to_top').fadeOut();
 	    }
 	});
-	$('#to_top').click(function() {
-	    $('body,html').animate({scrollTop:0},800);
-	});
 	
-	$(".scroll_to_footer").on("click", function (event) {
+	$("#go").on("click", function (event) {
 	    event.preventDefault();
 	    var id  = $(this).attr('href'),
-		top = $(id).offset().top - 90;
+		top = $(id).offset().top -125;
 	    $('body,html').animate({scrollTop: top}, 500);
 	});
 	
@@ -32,6 +43,12 @@ $(document).ready(function() {
 		$('#header').addClass('scroll');
 	    } else {
 		$('#header').removeClass('scroll');
+	    }
+	    
+	    if($(this).scrollTop() >= 150) {
+		$('#left_menu').addClass('scroll');
+	    } else {
+		$('#left_menu').removeClass('scroll');
 	    }
 	});
 
@@ -71,15 +88,6 @@ $(document).ready(function() {
 		$(".main_menu").toggleClass("show");
 		$(this).toggleClass('active');
 		$("#logo").toggleClass("toleft");
-		//if ($('.main_menu').class("display") == "block") {
-		   //$('.main_menu').slideUp(500);
-		//   $('.main_menu').removeClass('show');
-		//   $(this).removeClass('active');
-		//}else{
-		   //$('.main_menu').slideDown(500);
-		//   $('.main_menu').addClass('show');
-		//   $(this).addClass('active');
-		//}
 	});
 	
 	// анимация на главной
@@ -89,7 +97,6 @@ $(document).ready(function() {
 		$('#main_slide').addClass('animated');
 		//$('#header').addClass('animated');
 	};
-	
 	setTimeout (function(){
 		$('#index #header').addClass('animated');
 		
@@ -159,82 +166,119 @@ $(document).ready(function() {
 	
 	
 	
-	$('.promotions_menu').slick({
-	    slidesToShow: 5,
+	$('.production_menu').slick({
+	    slidesToShow: 6,
 	    slidesToScroll: 1,
 	    infinite: true,
 	    arrows: false,
 	    dots: false,
 	    focusOnSelect: true,
-	    asNavFor: '.promotions_more',
-	    vertical: true
+	    asNavFor: '.production_more',
+	    vertical: true,
+	    swipe: false
+	    
 	});
-	$('.promotions_more').slick({
+	$('.production_more').slick({
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    infinite: true,
-	    arrows: true,
-	    dots: true,
+	    arrows: false,
+	    dots: false,
 	    fade: true,
-	    asNavFor: '.promotions_menu',
-	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
-	    nextArrow: '<span class="slick-next">&nbsp;</span>',
-	    customPaging: function (slider, i) {
-		//FYI just have a look at the object to find aviable information
-		//press f12 to access the console
-		//you could also debug or look in the source
-		console.log(slider);
-		return '<strong>0' + (i + 1) + '</strong>/0' + slider.slideCount ;
-	    }
+	    asNavFor: '.production_menu',
+	    swipe: false,
 	});
 	
-	$('.projects_menu').slick({
-	    slidesToShow: 5,
+	
+	 
+	$('.promotions_more').slick({
+	    slidesToShow: 4,
 	    slidesToScroll: 1,
 	    infinite: true,
-	    arrows: true,
-	    dots: true,
+	    arrows: false,
+	    dots: false,
 	    focusOnSelect: true,
-	    asNavFor: '.projects_more',
+	    asNavFor: '.promotions_images',
 	    vertical: true,
+	    swipe: false,
+	    responsive: [
+		{
+		    breakpoint: 801,
+		    settings: {
+		      slidesToShow: 1,
+		      vertical: false,
+		      swipe: true,
+		    }
+		},
+	    ]
+	});
+	$('.promotions_images').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    arrows: false,
+	    dots: false,
+	    fade: true,
+	    asNavFor: '.promotions_more',
+	    swipe: false,
+	    
+	    responsive: [
+		{
+		    breakpoint: 801,
+		    settings: {
+		      swipe: true,
+		      arrows: true,
+		      fade: false,
+		      prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		      nextArrow: '<span class="slick-next">&nbsp;</span>',
+		    }
+		},
+	    ]
+	    
+	});
+	
+	
+	$('.clients_slider').slick({
+	    slidesToShow: 5,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    dots: false,
 	    centerMode: false,
 	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
 	    nextArrow: '<span class="slick-next">&nbsp;</span>',
-	    customPaging: function (slider, i) {
-		//FYI just have a look at the object to find aviable information
-		//press f12 to access the console
-		//you could also debug or look in the source
-		console.log(slider);
-		return '<strong>0' + (i + 1) + '</strong>/0' + slider.slideCount ;
-	    }
-	});
-	$('.projects_more').slick({
-	    slidesToShow: 1,
-	    slidesToScroll: 1,
-	    infinite: true,
-	    arrows: false,
-	    dots: false,
-	    fade: true,
-	    asNavFor: '.projects_menu',
 	    responsive: [
 		  {
-		    breakpoint: 801,
+		    breakpoint: 1501,
 		    settings: {
-		      arrows: true,
-		      dots: true,
-		      prevArrow: '<span class="slick-prev">&nbsp;</span>',
-		      nextArrow: '<span class="slick-next">&nbsp;</span>',
-		      customPaging: function (slider, i) {
-			//FYI just have a look at the object to find aviable information
-			//press f12 to access the console
-			//you could also debug or look in the source
-			console.log(slider);
-			return '<strong>0' + (i + 1) + '</strong>/0' + slider.slideCount ;
-		      }
+		      vertical: false,
+		      slidesToShow: 4,
+		    }
+		  },
+		  {
+		    breakpoint: 1201,
+		    settings: {
+		      slidesToShow: 3,
+		      vertical: false,
+		    }
+		  },
+		  {
+		    breakpoint: 901,
+		    settings: {
+		      slidesToShow: 2,
+		      vertical: false,
+		    }
+		  },
+		  
+		  {
+		    breakpoint: 451,
+		    settings: {
+		      slidesToShow: 2,
+		      vertical: false,
 		    }
 		  },
 		]
 	});
+	
 	
 	
 	$('.galery').slick({
@@ -329,118 +373,30 @@ $(document).ready(function() {
 		]
 	});
 	
-	
-	$(window).on('resize load', function(){
-		if ( window.innerWidth>1200 && $('#main_slide .activity').hasClass('slick-initialized') ) {
-		    $('#main_slide .activity').slick('unslick');
-		} else if ( window.innerWidth<=1200 && !$('#main_slide .activity').hasClass('slick-initialized') ) {
-		    $('#main_slide .activity').slick({
-		        prevArrow: '<span class="slick-prev"></span>',
-		        nextArrow: '<span class="slick-next"></span>',
-		        slidesToShow: 2,
-		        slidesToScroll: 1,
-		        responsive: [
-			{
-			   breakpoint: 801,
-			   settings: { 
-			      slidesToShow: 1,
-			   }
-			},
-		       ]
-		    });
-		}
-		
-		
-		if ( window.innerWidth>1400 && $('.production_block').hasClass('slick-initialized') ) {
-		    $('.production_block').slick('unslick');
-		} else if ( window.innerWidth<=1400 && !$('.production_block').hasClass('slick-initialized') ) {
-		    $('.production_block').slick({
-		        prevArrow: '<span class="slick-prev"></span>',
-		        nextArrow: '<span class="slick-next"></span>',
-		        slidesToShow: 4,
-		        slidesToScroll: 1,
-		        responsive: [
-			{
-			   breakpoint: 1030,
-			   settings: { 
-			      slidesToShow: 3,
-			   }
-			},
-			{
-			   breakpoint: 801,
-			   settings: { 
-			      slidesToShow: 2,
-			   }
-			},
-			{
-			   breakpoint: 500,
-			   settings: { 
-			      slidesToShow: 1,
-			   }
-			},
-		       ]
-		    });
-		}
-		
-		if ( window.innerWidth>1000 && $('.advantages').hasClass('slick-initialized') ) {
-		    $('.advantages').slick('unslick');
-		} else if ( window.innerWidth<=1000 && !$('.advantages').hasClass('slick-initialized') ) {
-		    $('.advantages').slick({
-		        prevArrow: '<span class="slick-prev"></span>',
-		        nextArrow: '<span class="slick-next"></span>',
-		        slidesToShow: 3,
-		        slidesToScroll: 1,
-		        responsive: [
-			{
-			   breakpoint: 801,
-			   settings: { 
-			      slidesToShow: 2,
-			   }
-			},
-			{
-			   breakpoint: 600,
-			   settings: { 
-			      slidesToShow: 1,
-			   }
-			},
-		       ]
-		    });
-		}
-		
-		if ( window.innerWidth>1400 && $('.services_blocks').hasClass('slick-initialized') ) {
-		    $('.services_blocks').slick('unslick');
-		} else if ( window.innerWidth<=1400 && !$('.services_blocks').hasClass('slick-initialized') ) {
-		    $('.services_blocks').slick({
-		        prevArrow: '<span class="slick-prev"></span>',
-		        nextArrow: '<span class="slick-next"></span>',
-		        slidesToShow: 2,
-		        slidesToScroll: 1,
-		        responsive: [
-			{
-			   breakpoint: 651,
-			   settings: { 
-			      slidesToShow: 1,
-			   }
-			},
-		       ]
-		    });
-		}
-	});
-	
-	// modal
-	$('.order_call').click(function(){
-		$('.order_call_button').click();
-		return false;
-	})
 
-	$('.order_product_button').click(function(){
-		$('.order_product_modal .uFormHeading div').text($('h1').text());
-		$('.input_product').val($('h1').text());
-	})
 
-	$('.services_button').click(function(){
-		$('.order_product_button').click();
-		return false;
-	})
+	jQuery("#parallax").mousemove(
+		function(e){
+			var offset = jQuery(this).offset();
+			var xPos = e.pageX - offset.left;
+			var yPos = e.pageY - offset.top;
+			var mouseXPercent = Math.round(xPos / jQuery(this).width() * 100);
+			var mouseYPercent = Math.round(yPos / jQuery(this).height() * 100);
+			jQuery(this).children('.layer3').each(
+				function(){
+					var diffX = jQuery('#Parallax').width() - jQuery(this).width();
+					var diffY = jQuery('#Parallax').height() - jQuery(this).height();
+					var myX = diffX * (mouseXPercent / 500);
+					var myY = diffY * (mouseYPercent / 1080);
+					var cssObj = {
+						'left': myX + 'px',
+						'top': myY + 'px'
+					}
+					jQuery(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
+				}
+			);
+		}
+	);
+
+   
 });
-

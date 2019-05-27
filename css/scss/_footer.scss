@@ -1,0 +1,406 @@
+/* start footer styles */
+
+#pre_foo {
+    display: table-row;
+    height: 100%;
+}
+
+
+footer {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: block;
+    background: #131314 url(images/footer_bg.jpg) center top no-repeat;
+    background-size: 100% 100%;; //cover;
+    box-sizing: border-box;
+    position: relative;
+    clear: both;
+    //padding-bottom: 98px;
+    
+    &:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 98px;
+	background: #1e1d20;
+    }
+    
+
+    .in { 
+	padding-top: 28px;
+	//padding-bottom: 45px;
+        //font-size: 14px;
+        //line-height: 145%;
+	//font-weight: 400;
+	color: #fff;
+	z-index: 1;
+        
+        &:after { 
+            @include clear();
+        }
+        
+    }
+    .h5 {
+	color: #fff;
+	margin-bottom: 12px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	//font-weight: 400;
+	//font-size: 12px;
+    }
+    
+    a {
+	color: #fff;
+	text-decoration: none;
+	//@include transition(color);
+	&:hover {
+	    color: $color_a_hover;
+	    //text-decoration: underline;
+        }
+    }
+
+    
+    .foo_left {
+	float: left;
+	width: 475/1546*100%;
+	max-width: 360px;
+	//margin-right: 12.9%;
+	//margin-bottom: 20px;
+	clear: left;
+    }
+    
+    .foo_top {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+	height: 83px;
+	box-sizing: border-box;
+	padding-top: 16px;
+	margin-bottom: 45px;
+	display: flex;
+	justify-content: space-between;
+	
+	span, a {
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+    }
+    
+    .foo_logo {
+	margin-left: -5px;
+	//margin-bottom: 30px;
+	padding-top: 0;
+	display: block;
+	width: 375/1546*100%;
+	
+	img {
+	    width: 100%;
+	    max-width: 261px;
+	}
+    }
+    
+    .tel {
+	//background: url(images/icon_tel_white.png) left 7px no-repeat;
+	
+	a {
+	    font-weight: 700;
+	    margin-left: 20px;
+	    letter-spacing: 1.3px;
+	}
+    }
+    
+    .foo_address {
+	margin-bottom: 33px;
+	.h5 {
+	    margin-bottom: 21px;
+	}
+    }
+        
+    .address {
+	
+	//background: url(images/icon_address_white.png) left 7px no-repeat;
+	
+	p {
+	    line-height: 35px;
+	}
+    }
+    
+    .map_link {
+	background: url(images/icon_map_red.png) left top no-repeat;
+	padding-left: 37px;
+	text-decoration: underline;
+	padding-top: 6px;
+	padding-bottom: 8px;
+	font-weight: 700;
+    }
+    
+    
+    .foo_menu {
+	float: right;
+	width: 210px;
+        position: relative;
+	//font-size: 11px;
+	//letter-spacing: 0.5px;
+	margin-bottom: 20px;
+	margin-left: 8.2%;
+	text-transform: uppercase;
+	font-weight: 700;
+	
+	>ul {
+	    li {
+		margin: 0 0 3px;
+	    }
+	}
+	
+	&.foo_submenu {
+	    width: 600/1566*100%;
+	    margin-left: 0; //39.8%;
+	    text-transform: none;
+	    //float: none;
+	    font-weight: 400;
+	    
+	    >ul {
+		
+		li {
+		    margin: 0 0 11px;
+		}
+	    }
+	}
+    }
+
+    .foo_presentation {
+	clear: right;
+	float: right;
+	width: 260px;
+	margin-top: -30px;
+	line-height: 24px;
+	
+	a {
+	    padding-left: 40px;
+	    display: block;
+	    background: url(images/icon_left_menu3.png) no-repeat left top / 29px auto;
+	    
+	    &:hover {
+		background-image: url(images/icon_left_menu3_hover.png);
+	    }
+	}
+    }
+    
+    .foo_text {
+	clear: left;
+	border-top: 1px solid #959595;
+	width: 375/1546*100%;
+	padding-top: 30px;
+	margin-bottom: 45px;
+	
+	p {
+	    line-height: 24px;
+	    margin-bottom: 25px;
+	}
+    }
+    
+    #copy {
+	clear: both;
+	padding: 38px 0 15px;
+	min-height: 45px;
+	//letter-spacing: 0.8px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1600px) {
+    footer {
+	.tel {
+	    line-height: 25px;
+	    a {
+		margin-left: 0px;
+		display: block;
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    footer {
+	.in {
+	    padding-top: 16px;
+	}
+	.foo_top {
+	    height: 58px;
+	    padding-top: 0px;
+	    padding-bottom: 13px;
+	    align-items: center;
+	    //margin-bottom: 16px;
+	}
+	.foo_logo {
+	    img {
+		max-width: 208px;
+	    }
+	}
+	.tel {
+	    line-height: 20px;
+	    a {
+		font-size: 16px;
+	    }
+	}
+	
+	.foo_menu {
+	    width: 185px;
+	    margin-left: 4%;
+	    
+	    &.foo_submenu {
+		width: 600/1566*100%;
+	    }
+	}
+	.foo_presentation {
+	    width: 225px;
+	    margin-top: -10px;
+	}
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+	.foo_left.foo_logo {
+	    width: 22%;
+	    margin-right: 0;
+	    img {
+		width: 150px;
+	    }
+	}
+	
+	.mail {
+	    width: 137px;
+	    line-height: 20px;
+	}
+	
+	.foo_left {
+	    width: 43%;
+	    margin-right: 5%;
+	}
+	
+	.foo_menu {
+	    width: 110px;
+	    margin-left: 0;
+	    margin-bottom: 0;
+	    
+	    &.foo_submenu {
+		width: 110px;
+		clear: right;
+		margin-bottom: 20px;
+		
+		ul {
+		    display: none;
+		}
+	    }
+	}
+	.foo_presentation {
+	    float: none;
+	    clear: none;
+	    overflow: hidden;
+	    margin-top: 0;
+	}
+	
+	.foo_text {
+	    clear: none;
+	    float: none;
+	    overflow: hidden;
+	    width: 225px;
+	}
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+	.foo_left.foo_logo {
+	    float: left;
+	    margin-left: 0;
+	    margin-bottom: 0;
+	    width: 225px;
+	}
+	.foo_top {
+	    display: block;
+	    width: 50%;
+	    height: auto;
+	    margin-right: 0;
+	    margin-bottom: 0px;
+	    float: right;
+	    border-bottom: 0;
+	    clear: right;
+	    .tel, .mail {
+		display: block;
+		width: auto;
+		margin-bottom: 20px;
+	    }
+	}
+	.foo_left {
+	    width: 50%;
+	    margin-left: 5%;
+	    margin-right: 0;
+	    float: right;
+	    clear: none;
+	    
+	    .h5 {
+		display: none;
+	    }
+	}
+	
+	.foo_menu {
+	    display: none;
+	}
+	
+	.address p {
+	    line-height: 25px;
+	}
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+	&:after {
+	    height: 50px;
+	}
+	.foo_text {
+	    border-top: 0;
+	    padding-top: 0;
+	    margin-bottom: 35px;
+	    p {
+		display: none;
+	    }
+	}
+	.foo_presentation {
+	    display: none;
+	}
+	
+	.foo_left.foo_logo {
+	    float: none;
+	    width: auto;
+	}
+	.foo_top {
+	    float: none;
+	    margin-left: 0;
+	    width: auto;
+	}
+	.foo_left {
+	    float: none;
+	    margin-left: 0;
+	    margin-bottom: 20px;
+	    width: auto;
+	}
+	
+	#copy {
+	    padding: 15px 0 5px;
+	    min-height: 32px;
+	}
+    }
+}
+@media screen and (max-width: 450px) {
+
+}
+
+
+
+/* end footer styles */
