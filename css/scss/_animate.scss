@@ -328,6 +328,9 @@
 #main_screen.main_section .button { opacity: 0; }
 #main_screen.main_section.animated .button { -webkit-animation-delay: 1.5s;  animation-delay: 1.5s; -webkit-animation-name: fadeIn; animation-name: fadeIn; }
 
+#main_screen.main_section .poll { opacity: 0; }
+#main_screen.main_section.animated .poll { -webkit-animation-delay: 1.8s;  animation-delay: 1.8s; -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+
 
 #production.main_section h1 { opacity: 0; }
 #production.main_section.animated h1 { -webkit-animation-delay: 0.0s;  animation-delay: 0.0s; -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
@@ -458,6 +461,17 @@
 #text_block .text { opacity: 0; }
 #text_block.animated .text { -webkit-animation-delay: .5s;  animation-delay: .5s; -webkit-animation-name: fadeInLeft; animation-name: fadeInLeft; }
 
+
+#main_form.main_section {
+  opacity: 0;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+#main_form.main_section.animated  {  -webkit-animation-name: bounceInUp; animation-name: bounceInUp; }
 
 #main_form.main_section h2 { opacity: 0; -webkit-animation-delay: 0.5s;  animation-delay: 0.5s; }
 #main_form.main_section.animated h2 {  -webkit-animation-name: bounceInUp; animation-name: bounceInUp; }

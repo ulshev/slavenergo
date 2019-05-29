@@ -7,27 +7,20 @@ $(document).ready(function() {
 	    $(this).attr('placeholder',$(this).data('placeholder'));
 	});
 	
-	
-	$("#lens_img").imagezoomsl({
+	$(window).on('resize load', function(){
+		if ( window.innerWidth>1200 ) {
+			$("#lens_img").imagezoomsl({
+			    innerzoommagnifier: true,
+			    classmagnifier: window.external ? window.navigator.vendor === "Yandex" ? "" : "round-loupe" : "",
+			    magnifierborder: "0px solid #F0F0F0",  // fix для Opera, Safary, Yandex		  
+			    zoomrange: [1.5, 2],
+			    scrollspeedanimate: 2,
+			    zoomspeedanimate:3,
+			    zoomstart: 1.5,
+			    magnifiersize: [180, 180],
+			});
 		
-	    innerzoommagnifier: true,
-	    classmagnifier: window.external ? window.navigator.vendor === "Yandex" ? "" : "round-loupe" : "",
-	    magnifierborder: "0px solid #F0F0F0",                               // fix для Opera, Safary, Yandex		  
-	    zoomrange: [1.5, 2],
-	    scrollspeedanimate: 2,
-	    zoomspeedanimate:3,
-	    zoomstart: 1.5,
-	    magnifiersize: [180, 180],
-	});
-	
-	
-	// вверх
-	$(window).scroll(function() {
-	    if($(this).scrollTop() != 0) {
-		$('#to_top').fadeIn();
-	    } else {
-		$('#to_top').fadeOut();
-	    }
+		}
 	});
 	
 	$("#go").on("click", function (event) {
@@ -128,18 +121,6 @@ $(document).ready(function() {
 	    });
 	} );
 	
-	$('.cont_links a').click(function(){
-		var el = $(this).closest('.cont');
-		var elIndex = el.index() - 1;
-		if (!$('.how_to_get').hasClass('active')){
-		  $('.tab_buttons span:not(.active)').click();
-		}
-		
-		$('.accordion h5').eq(elIndex).click();
-		  
-		return false;
-	})
-	
 	
 	$('.more_text_link').html('... <span class="link">Показать больше</span>');
 
@@ -238,6 +219,55 @@ $(document).ready(function() {
 	});
 	
 	
+	$('.advantages_menu').slick({
+	    slidesToShow: 12,
+	    slidesToScroll: 12,
+	    infinite: true,
+	    arrows: false,
+	    dots: false,
+	    focusOnSelect: true,
+	    asNavFor: '.advantages_more',
+	    //vertical: true,
+	    swipe: false,
+	    responsive: [
+		{
+		    breakpoint: 601,
+		    settings: {
+		      slidesToShow: 1,
+		      slidesToScroll: 1,
+		      //vertical: false,
+		      swipe: true,
+		    }
+		},
+	    ]
+	});
+	$('.advantages_more').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    arrows: false,
+	    dots: true,
+	    fade: true,
+	    asNavFor: '.advantages_menu',
+	    swipe: false,
+	    
+	    responsive: [
+		{
+		    breakpoint: 601,
+		    settings: {
+		      swipe: true,
+		      arrows: true,
+		      fade: false,
+		      dots: false,
+		      prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		      nextArrow: '<span class="slick-next">&nbsp;</span>',
+		    }
+		},
+	    ]
+	    
+	});
+	
+	
 	$('.clients_slider').slick({
 	    slidesToShow: 5,
 	    slidesToScroll: 1,
@@ -280,6 +310,42 @@ $(document).ready(function() {
 	});
 	
 	
+	$('.sertificates_block .slider').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    dots: false,
+	    fade: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
+	
+	
+	$('.reviews_more').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    arrows: false,
+	    dots: false,
+	    focusOnSelect: true,
+	    asNavFor: '.reviews_image',
+	    fade: true,
+	});
+	$('.reviews_image').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    arrows: true,
+	    dots: false,
+	    fade: true,
+	    asNavFor: '.reviews_more',
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	    
+	});
+	
+	
+	
 	
 	$('.galery').slick({
 	    slidesToShow: 1,
@@ -292,34 +358,34 @@ $(document).ready(function() {
 	});
 	
 	$('.catalog.slider').slick({
+	    dots: false,
+	    arrows: true,
+	    infinite: true,
+            speed: 1000,
 	    slidesToShow: 4,
 	    slidesToScroll: 1,
-	    arrows: true,
-	    dots: false,
-	    centerMode: false,
-	    //fade: true,
-	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
-	    nextArrow: '<span class="slick-next">&nbsp;</span>',
-	    responsive: [
+		//centerMode: true,
+	    //variableWidth: true,
+		prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		nextArrow: '<span class="slick-next">&nbsp;</span>',
+		responsive: [
 		  {
-		    breakpoint: 1301,
+		    breakpoint: 1501,
 		    settings: {
-		      vertical: false,
 		      slidesToShow: 3,
 		    }
 		  },
+		  
 		  {
-		    breakpoint: 1100,
+		    breakpoint: 1151,
 		    settings: {
 		      slidesToShow: 2,
-		      vertical: false,
 		    }
 		  },
 		  {
-		    breakpoint: 800,
+		    breakpoint: 701,
 		    settings: {
 		      slidesToShow: 1,
-		      vertical: false,
 		    }
 		  },
 		]

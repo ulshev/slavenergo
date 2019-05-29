@@ -56,10 +56,11 @@
     
     .letters {
 	position: absolute;
-	width: calc(614/1546*100%);
+	width: 614/1546*100%;
 	//height: 520px;
-	top: calc(215/941*100%);
+	top: 215/941*100%;
 	left: 50% + 299/1546*100%;
+	text-align: center;
 	@include transition(all);
 	
 	img {
@@ -69,9 +70,9 @@
     
     .image {
 	position: absolute;
-	width: calc(614/1546*100%);
+	width: 614/1546*100%;
 	//height: 520px;
-	top: calc(312/941*100%);
+	top: 312/941*100%;
 	left: 23px;
 	@include transition(all);
 	
@@ -167,12 +168,68 @@
 	background-color: $color_a_hover;
     }
 }
+
+#vysokovoltnyye_transformatory #main_screen {
+    background-image: url(images/main_screen_bg2.jpg);
+    
+    .image {
+	left: 178px;
+	top: 260/941*100%;
+    }
+    
+    .text {
+	top: 56.2%;
+    }
+    
+    .letters {
+	left: 68.3%;
+    }
+    
+    .button {
+	margin-right: 54px
+    }
+    
+    .poll {
+	display: inline-block;
+	vertical-align: top;
+	//margin-left: 30px;
+	padding-top: 5px;
+	
+	a {
+	    color: #fff;
+	    
+	    &:hover {
+		color: $color_a_hover;
+	    }
+	}
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 1600px) {
-    #main_screen {
+    #main_screen { 
+	height: 850px;
 	
 	.letters {
-	    width: calc(524/1546*100%);
-	    top: calc(270/941*100%);
+	    width: 524/1546*100%;
+	    top: 270/941*100%;
+	    left: 60%;
+	}
+    }
+    
+    #vysokovoltnyye_transformatory #main_screen {
+	.image {
+	    left: 100px;
+	}
+	
+	.text {
+	    top: 50%;
+	}
+	
+	.letters {
 	    left: 60%;
 	}
     }
@@ -183,14 +240,14 @@
 	height: 770px;
 	
 	.letters {
-	    width: calc(524/1546*100%);
-	    top: calc(270/941*100%);
+	    width: 524/1546*100%;
+	    top: 270/941*100%;
 	    left: 59.47%;
 	}
     
 	.image {
-	    width: calc(546/1546*100%);
-	    top: calc(265/941*100%);
+	    width: 546/1546*100%;
+	    top: 265/941*100%;
 	    left: 120px;
 	}
 	.text {
@@ -208,6 +265,24 @@
 	}
 	
 	
+    }
+    
+     #vysokovoltnyye_transformatory #main_screen {
+	height: 748px;
+	.image {
+	    left: 150px;
+	    top: 25%;
+	}
+	
+	.text {
+	    top: 39%;
+	    margin-left: 53%;
+	}
+	
+	.letters {
+	    left: 57%;
+	    top: 23.6%;
+	}
     }
 }
 
@@ -234,6 +309,18 @@
 	h2 {
 	    line-height: 35px;
 	    font-size: 25px;   
+	}
+    }
+    
+    #vysokovoltnyye_transformatory #main_screen {
+	height: 550px;
+	.image {
+	    left: 50px;
+	}
+	
+	.text {
+	    top: 30%;
+	    margin-left: 43%;
 	}
     }
     
@@ -268,6 +355,20 @@
 	    font-size: 25px;   
 	}
     }
+    
+    #vysokovoltnyye_transformatory #main_screen {
+	height: 450px;
+	.letters {
+	    width: 41%;
+	    top: 21%;
+	    left: 50%;
+	}
+	
+	.text {
+	    top: 17.7%;
+	    margin-left: 0%;
+	}
+    }
 }
 @media screen and (max-width: 600px) {
     #main_screen {
@@ -290,6 +391,21 @@
 	p{
 	    line-height: 25px;
 	}
+	.button {
+	    margin-bottom: 30px;
+	}
+    }
+    #vysokovoltnyye_transformatory #main_screen {
+	height: 350px;
+	
+	.text {
+	    width: auto;
+	    top: 10%;
+	}
+	.button {
+	    margin-bottom: 15px;
+	    margin-right: 20px;
+	}
     }
 }
 
@@ -306,6 +422,7 @@
 	.text {
 	    top: 13.7%;
 	    max-width: 300px;
+	    width: 100%;
 	}
 	h2 {
 	    line-height: 28px;
@@ -319,7 +436,10 @@
 	    margin-bottom: 20px;
 	}
     }
+    
+    #vysokovoltnyye_transformatory #main_screen {
+	height: 270px;
+    }
 }
-
 
 /* end main screen styles */

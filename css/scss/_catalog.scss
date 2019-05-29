@@ -1,0 +1,152 @@
+/* start catalog styles */ 
+
+#catalog.main_section {
+    .in {
+	padding-top: 117px;
+	padding-bottom: 40px;
+    }
+}
+
+.catalog {
+    margin: 0 -30px 50px;
+    padding: 0 10px;
+    
+    .slick-arrow {
+	top: 270px;
+    }
+    
+    .product_item {
+	margin: 25px 20px 210px;
+	height: 486px;
+	border: 1px solid #e7e7e7;
+	background: #fff;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 30px 40px;
+	font-size: 16px;
+	line-height: 30px;
+	@include transition(all);
+	
+	.img {
+	    text-align: center;
+	    height: 260px;
+	    line-height: 260px;
+	    margin-bottom: 12px;
+	    position: relative;
+	    
+	    
+	    img {
+		display: inline-block;
+		width: 95%;
+		max-width: 250px;
+		
+	    }
+	    
+	    .hover {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -19px 0 0 -100px;
+		background-color: #fff;
+		color: $color_a_hover;
+		width: 200px;
+		height: 38px;
+		line-height: 38px;
+		border: 1px dotted $color_a_hover;
+		border-radius: 19px;
+		opacity: 1;
+		@include transition(all);
+	    }
+	}
+	
+	h5 {
+	    margin-bottom: 9px;
+	}
+	
+	.text {
+	    text-align: center;
+	}
+	
+	p {
+	    margin-bottom: 6px;
+	    display: flex;
+	    justify-content: space-between;
+	    text-align: left;
+	    
+	    .char, strong {
+		display: inline-block;
+	    }
+	    
+	    a {
+		display: inline-block;
+		font-weight: 600;
+		margin: 8px 0 19px;
+	    }
+	}
+	
+	&:hover, &.slick-current {
+	    height: 672px;
+	    margin-bottom: 25px;
+	    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.19);
+	}
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    #catalog.main_section {
+	.in {
+	    padding-top: 70px;
+	    padding-bottom: 11px;
+	}
+    }
+    
+    .catalog {
+	margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #catalog.main_section {
+	.in {
+	    padding-top: 50px;
+	}
+    }
+    .catalog {
+	padding: 0 0px;
+	margin: 0 -20px 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #catalog.main_section {
+	.in {
+	    padding-top: 20px;
+	    padding-bottom: 102px;
+	}
+    }
+    .catalog {
+	padding: 0 0px;
+	margin: 0 0px 30px;
+	
+	.product_item {
+	    margin: 0;
+	    border: 0;
+	    background: none;
+	    padding: 20px;
+	    font-size: 14px;
+	    line-height: 18px;
+	    height: 550px;
+	    
+	    h5 {
+		margin-bottom: 0;
+	    }
+	    
+	    &:hover, &.slick-current {
+		height: 550px;
+		margin-bottom: 0;
+	    }
+	}
+    }
+}
+
+/* end catalog styles */

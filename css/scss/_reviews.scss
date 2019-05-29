@@ -1,0 +1,170 @@
+/* start reviews styles */ 
+
+#reviews {
+    z-index: 1;
+    overflow: visible;
+   
+    
+    &:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: -14%;
+	width: 100%;
+	height: 110%;
+	background:  url(images/reviews_bg.jpg) no-repeat right center / auto 100%;
+    }
+    
+    .in {
+	padding-top: 107px;
+	padding-bottom: 188px;
+	min-height: 414px;
+    }
+    
+    h2 {
+	float: left;
+	width: 328px;
+    }
+    
+    .all_link {
+	float: none;
+	top: 9px;
+    }
+
+}    
+.reviews_more {
+    float: left;
+    width: calc(50% + 165px);
+    clear: both;
+    
+    .logo {
+	margin-bottom: 21px;
+    }
+    
+    h3 {
+	margin-bottom: 26px;
+    }
+    
+    p + strong {
+	display: block;
+    }
+}
+
+.reviews_image {
+	float: right;
+	width: 356px;
+	padding: 0 30px;
+	
+	.slick-list {
+	    box-shadow: -4px -4px 46px rgba(119, 119, 138, 0.4); 
+	    background: #fff;
+	}
+	
+	.reviews_letter {
+	    padding: 10px 6px;
+	    text-align: center;
+	}
+	
+	
+	img {
+	    display: inline-block;
+	    max-width: 100%;
+	}
+    }
+
+@media screen and (max-width: 1400px) {
+    #reviews {
+	&:before {
+	    top: -10%;
+	}
+	.in {
+	    padding-top: 70px;
+	    padding-bottom: 83px;
+	}
+	h2 {
+	    margin-bottom: 35px;
+	}
+    }
+    
+    .reviews_image {
+	width: 286px;
+    }
+    
+    .reviews_more {
+	width: calc(50% + 50px);
+	h3 {
+	    margin-bottom: 16px;
+	}
+    }
+}
+@media screen and (max-width: 1000px) {
+    #reviews {
+	.in {
+	    padding-top: 30px;
+	    padding-bottom: 50px;
+	}
+	
+	&:before {
+	    display: none;
+	}
+	
+	h2 {
+	    width: auto;
+	}
+	
+	.all_link {
+	    float: right;
+	}
+	
+    }
+    .reviews_image {
+	width: 35%;
+	padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #reviews {
+	.in {
+	    padding-top: 10px;
+	    padding-bottom: 20px;
+	}
+	h2 {
+	    margin-bottom: 10px;
+	}
+    }
+    
+    .reviews_more {
+	width: 100%;
+	float: none;
+	margin-bottom: 7px;
+	line-height: 24px;
+	
+	.logo {
+	    height: 45px;
+	    margin-bottom: 7px;
+	    
+	    img {
+		max-height: 100%;
+	    }
+	}
+	
+	h3 {
+	    margin-bottom: 7px;
+	}
+    }
+    
+    .reviews_image {
+	width: auto;
+	max-width: 300px;
+	margin: 0 0 20px;
+	padding: 0;
+	float: none;
+	
+	.slick-list {
+	    box-shadow: 0px 0px 1px rgba(119, 119, 138, 0.4); 
+	}
+    }
+}
+
+/* end reviews styles */

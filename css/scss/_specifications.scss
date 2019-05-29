@@ -1,0 +1,133 @@
+/* start specifications styles */ 
+
+#specifications {
+    z-index: 1;
+    background: #9f9f9f url(images/specifications_bg.jpg) no-repeat center / cover;
+    
+    .in {
+	padding-top: 94px;
+	padding-bottom: 94px;
+	min-height: 414px;
+    }
+    
+    h2 {
+	margin-bottom: 50px;
+    }
+    
+    .text {
+	margin-left: 44.65%;
+	
+	ul {
+	    margin-bottom: 35px;
+	    li {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 65px;
+		margin-bottom: 23px;
+		letter-spacing: 1.1px;
+		line-height: 24px;
+		&:before {
+		    background: url(images/circle4.png) no-repeat center / 100% auto;
+		    width: 35px;
+		    height: 39px;
+		    top: 0;
+		}
+	    }
+	}
+    }
+    
+    .about_facts {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -38%;
+	margin-top: -207px;
+	max-width: 35%;
+	
+	img {
+	    max-width: 100%;
+	}
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #specifications {
+	.in {
+	    padding-top: 75px;
+	    padding-bottom: 70px;
+	}
+	
+	h2 {
+	    margin-bottom: 40px;
+	}
+	
+	.text {
+	    margin-left: 45.35%;
+	    ul {
+		margin-bottom: 17px;
+		li {
+		    padding-top: 10px;
+		    padding-bottom: 15px;
+		    //padding-left: 55px;
+		    margin-bottom: 8px;
+		}
+	    }
+	}
+	
+	.about_facts {
+	    margin-left: -42%;
+	    margin-top: -207px;
+	}
+    }
+}
+@media screen and (max-width: 1000px) {
+    #specifications {
+	.in {
+	    padding-top: 70px;
+	    padding-bottom: 65px;
+	}
+	
+	.text {
+	    margin-left: 0;
+	}
+	
+	.about_facts {
+	    display: none;
+	}
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #specifications {
+	.in {
+	    padding-top: 32px;
+	    padding-bottom: 40px;
+	}
+	
+	.text {
+	    text-align: center;
+	    
+	    ul {
+		text-align: left;
+		
+		li {
+		    padding-left: 46px;
+		    //padding-top: 0;
+		    padding-bottom: 0px;
+		    min-height: 35px;
+		    letter-spacing: 0;
+		    margin-bottom: 2px;
+		    &:before {
+			top: 2px;
+		    }
+		}
+	    }
+	}
+	
+	h2 {
+	    margin-bottom: 0px;
+	}
+    }
+}
+
+/* end specifications styles */

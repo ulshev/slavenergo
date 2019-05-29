@@ -22,6 +22,14 @@
 	    column-gap: 70px;
 	    margin-bottom: 27px;
 	    font-weight: 600;
+	    
+	    li {
+		padding-left: 0;
+		
+		&:before {
+		    display: none;
+		}
+	    }
 	}
     }
     
@@ -31,7 +39,7 @@
 }
 
 .cities_map {
-    background: #ebebeb url(images/cities_map2.png) no-repeat right bottom / auto 100%;
+    background: #ebebeb url(images/cities_map.png) no-repeat right bottom / auto 100%;
     height: 847px;
     position: absolute;
     right: 0;
