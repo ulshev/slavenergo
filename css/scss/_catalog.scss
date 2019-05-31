@@ -5,6 +5,12 @@
 	padding-top: 117px;
 	padding-bottom: 40px;
     }
+    
+    .tabs_container {
+	.tab_buttons {
+	    margin-bottom: 24px;
+	}
+    }
 }
 
 .catalog {
@@ -54,7 +60,7 @@
 		line-height: 38px;
 		border: 1px dotted $color_a_hover;
 		border-radius: 19px;
-		opacity: 1;
+		opacity: 0;
 		@include transition(all);
 	    }
 	}
@@ -88,6 +94,13 @@
 	    height: 672px;
 	    margin-bottom: 25px;
 	    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.19);
+	    
+	    .img {
+	    
+		.hover {
+		    opacity: 1;
+		}
+	    }
 	}
     }
 }

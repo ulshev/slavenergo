@@ -107,6 +107,63 @@
 }
 
 
+#about_page #advantages {
+    background: url(images/advantages_bg.jpg) no-repeat center / cover;
+    //opacity: 0.5;
+    margin-bottom: -7px;
+    .in {
+	padding-top: 30px;
+    }
+}
+
+ul.advantages_block {
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    counter-reset: slick-dots;
+    
+    li {
+	position: relative;
+	flex-grow: 1;
+	//width: 20%;
+	text-align: center;
+	font-size: 18px;
+	margin: 0 4%;
+	
+	
+	&:before {
+	    counter-increment: slick-dots;
+	    content: counter(slick-dots);
+	    display: inline-block;
+	    padding-left: 65px;
+	    padding-top: 10px;
+	    margin-left: -30px;
+	    margin-bottom: 8px;
+	    font-size: 50px;
+	    line-height: 50px;
+	    font-weight: 500;
+	    color: $color_a_hover;
+	    background: url(images/advantages_li_bg.png) no-repeat left center;
+	}
+	
+	&:first-child {
+	    margin-left: 0;
+	}
+	&:last-child {
+	    margin-right: 0;
+	}
+	
+	strong {
+	    display: block;
+	    
+	    &:first-letter {
+		color: $color_a_hover;
+		font-size: 24px;
+	    }
+	}
+    }
+}
+
 @media screen and (min-width: 601px) {
     .advantages_menu {
     

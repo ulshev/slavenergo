@@ -47,7 +47,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 115%;
+	height: 100%;
 	//opacity: 0;
 	@include transition_slow(all);
 	background-color: rgba(33, 34, 37, 0.65);
@@ -61,7 +61,7 @@
     .in {
 	z-index: 1;
 	max-width: 1698px;
-	padding: 11px 100px;
+	padding: 11px 100px 0;
     }
     
     .button {
@@ -227,7 +227,7 @@
     	//@include transition(all);
     	vertical-align: middle;
     	border-bottom: 4px solid transparent;
-	padding: 0px 5px 6px;
+	padding: 3px 5px 15px;
     }
     .active, li:hover  {
 	>a {
@@ -274,7 +274,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	left: 0px;
-	top: 36px;
+	top: 47px;
 	opacity: 0;
 	@include transition(all);
 	font-family: $font_family_alt;

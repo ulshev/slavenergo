@@ -53,7 +53,7 @@
     }
     
     .slider {
-	//float: left;
+	float: left;
 	width: 356px;
 	padding: 0 30px;
 	margin-top: 66px;
@@ -109,9 +109,7 @@
 	}
 	
 	.poll {
-	    display: inline-block;
-	    margin-right: 60px;
-	    vertical-align: middle;
+	    margin-right: 45px;
 	}
     }
     
@@ -119,7 +117,7 @@
 	margin: 0 32px 50px 0;
 	width: calc(51% + 25px);
 	.image {
-	    margin-right: -185px;
+	    margin-right: -187px;
 	    width: 78%;
 	    
 	    img {
@@ -145,13 +143,13 @@
 	    padding-bottom: 27px;
 	}
 	
-	.image {
-	    display: none;
-	}
-	
 	h2 {
 	    font-size: 26px;
 	    margin-bottom: 25px;
+	}
+	
+	.poll {
+	    margin-right: 30px;
 	}
 	
     }
@@ -159,10 +157,15 @@
     .sertificates_block {
 	width: 35%;
 	
+	.image {
+	    display: none;
+	}
+	
 	.slider {
 	    width: 100%;
 	    padding: 0 25px; 
 	    margin-top: 33px;
+	    float: none
 	}
     }
 }

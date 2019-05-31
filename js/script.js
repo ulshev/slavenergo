@@ -344,14 +344,11 @@ $(document).ready(function() {
 	    
 	});
 	
-	
-	
-	
 	$('.galery').slick({
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    arrows: true,
-	    dots: true,
+	    dots: false,
 	    fade: true,
 	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
 	    nextArrow: '<span class="slick-next">&nbsp;</span>',
