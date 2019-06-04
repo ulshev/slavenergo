@@ -455,7 +455,7 @@ ul.slick-dots {
     height: auto;
     overflow: visible;
     //padding-top: 8px;
-    
+    position: relative;
 }
 
 .tab_buttons {
@@ -478,11 +478,89 @@ ul.slick-dots {
 	display: inline-block;
 	@include transition(all);
 	
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent; 
+	
         &.active, &:hover {
 	    background-color: $color_a_hover;
 	    color: #fff;
 	}
     } 
+}
+
+@media screen and (max-width: 1000px) {
+    .tab_buttons {
+	height: 45px;
+	margin-bottom: 24px;
+	span, a {
+	    padding: 5px 20px;
+	    line-height: 35px;
+	    height: 35px;
+	} 
+    }
+}
+@media screen and (max-width: 600px) {
+    .tabs_container {
+	position: relative;
+	padding-bottom: 80px;
+    }
+    .tab.active {
+	margin-bottom: 40px;
+	
+	&:last-child {
+	    margin-bottom: -40px;
+	}
+    }
+    .tab_buttons {
+	position: static;
+	height: auto;
+	background: none;
+	border-radius: 0;
+	span {
+	    position: relative;
+	    float: none;
+	    display: block;
+	    border-bottom: 2px solid #000;
+	    padding: 5px 0px;
+	    border-radius: 0;
+	    font-weight: 600;
+	    
+	    &:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -3px;
+		border-top: 6px solid $color_a_hover;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		@include transition(all);
+	    }
+	    
+	    &.active, &:hover {
+		background: none;
+		color: #000;
+		&:after {
+		    transform: rotate(180deg);
+		}
+	    }
+	    &.active + span {
+		bottom: 40px;
+		position: absolute;
+		width: 100%;
+	    }
+	    &.active + span + span {
+		bottom: 0px;
+		position: absolute;
+		width: 100%;
+	    }
+	    &.active + span + span + span {
+		bottom: -40px;
+		position: absolute;
+		width: 100%;
+	    }
+	} 
+    }
 }
 .main_section {
     overflow: hidden;
@@ -507,15 +585,6 @@ ul.slick-dots {
     }
 }
 @media screen and (max-width: 800px) {
-    .tab_buttons {
-	height: 45px;
-	margin-bottom: 24px;
-	span, a {
-	    padding: 5px 20px;
-	    line-height: 35px;
-	    height: 35px;
-	} 
-    }
     .in {
 	padding: 0px 40px;
     }
@@ -578,12 +647,12 @@ ul.slick-dots {
 .text {
     ul {
 	margin-bottom: 30px;
-	overflow: hidden;
 	li {
 	    //margin-bottom: 10px;
 	    position: relative;
 	    padding-left: 30px;
 	    margin-bottom: 10px;
+	    overflow: hidden;
 	    
 	    &:before {
 		content: '';
@@ -648,6 +717,20 @@ ul.slick-dots {
 	
 	a {
 	    text-decoration: none;
+	}
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .bread_crumbs {
+	margin-bottom: 25px;
+	
+	ul li {
+	    &:before {
+		width: 8px;
+		height: 8px;
+		top: 8px;
+	    }  
 	}
     }
 }

@@ -27,11 +27,25 @@
 	border: 1px solid #e7e7e7;
 	background: #fff;
 	box-sizing: border-box;
+	position: relative;
 	overflow: hidden;
 	padding: 30px 40px;
 	font-size: 16px;
 	line-height: 30px;
 	@include transition(all);
+	
+	&:before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 2;
+	    width: 100%;
+	    height: 8px;
+	    background: $color_a_hover;
+	    opacity: 0;
+	    @include transition(opacity);
+	}
 	
 	.img {
 	    text-align: center;
@@ -95,6 +109,10 @@
 	    margin-bottom: 25px;
 	    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.19);
 	    
+	    &:before {
+		opacity: 1;
+	    }
+	    
 	    .img {
 	    
 		.hover {
@@ -134,7 +152,7 @@
     #catalog.main_section {
 	.in {
 	    padding-top: 20px;
-	    padding-bottom: 102px;
+	    padding-bottom: 40px;
 	}
     }
     .catalog {
@@ -149,6 +167,10 @@
 	    font-size: 14px;
 	    line-height: 18px;
 	    height: 550px;
+	    
+	    &:before {
+		display: none;
+	    }
 	    
 	    h5 {
 		margin-bottom: 0;

@@ -112,7 +112,7 @@
     input[type=text] {
 	background: none;
 	border: 1px solid #fff;
-	color: #transparent;
+	color: transparent;
 	font-family: $font_family_os;
 	font-size: 16px;
 	height: 34px;
@@ -438,7 +438,7 @@
 	margin-right: 0px;
 	font-size: 15px;
 	a {
-	    padding: 0px 0px 6px;
+	    padding: 0px 0px 18px;
 	}
 	.menu_item_catalog {
 	    margin-left: 0px;
@@ -478,7 +478,7 @@
 	display: none;
     }
     .header_cont {
-	justify-content: center;
+	//justify-content: center;
 	.search {
 	    display: inline-block;
 	}
@@ -508,6 +508,7 @@
 	
 	&.toleft {
 	    margin-left: 30px;
+	    position: fixed;
 	}
     }
     #header {
@@ -597,7 +598,7 @@
     .main_menu {
 	position: fixed;
 	z-index: 5;
-	width: 245px;
+	width: 305px;
 	left: -100%;
 	//margin-top: 0px;
 	top: 0px;
@@ -684,7 +685,7 @@
 		
 	    a {
 		display: block;
-		padding: 10px 5px 10px;
+		padding: 5px 5px 5px;
 		
 		&:before {
 		    display: block;
@@ -738,6 +739,7 @@
     }
     .main_menu {
 	padding: 60px 20px 1px;
+	width: 265px;
     }
     .menu_button {
 	width: 26px;
@@ -786,6 +788,7 @@
     }
     .main_menu {
 	padding: 49px 20px 1px 11px;
+	width: 245px;
     }
     .menu_button {
 	width: 21px;

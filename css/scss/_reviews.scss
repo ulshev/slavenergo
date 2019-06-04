@@ -71,11 +71,20 @@
 	    max-width: 100%;
 	}
     }
-
+@media screen and (max-width: 1600px) {
+    #reviews {
+	&:before {
+	    top: 0%;
+	    height: 100%;
+	    background-position: 105% center;
+	}
+    }
+}
 @media screen and (max-width: 1400px) {
     #reviews {
 	&:before {
-	    top: -10%;
+	    top: 0%;
+	    background-position: 95% center;
 	}
 	.in {
 	    padding-top: 70px;

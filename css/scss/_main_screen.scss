@@ -87,26 +87,26 @@
 	    background: no-repeat center / 100% auto;
 	}
 	.lightning1 {
-	    top: 88px;
-	    left: 260px;
-	    width: 328px;
-	    height: 194px;
+	    top: 17%; //88px;
+	    left: 42%; // 260px;
+	    width: 328/614*100%;
+	    height: 194/520*100%;
 	    background-image: url(images/lightning1.png);
 	    animation: lightning1  2.5s infinite ease 0s;
 	}
 	.lightning2 {
-	    top: -68px;
-	    left: 339px;
-	    width: 327px;
-	    height: 324px;
+	    bottom: 50%; //top: -68px;
+	    left: 55%; // 339px;
+	    width: 327/614*100%;
+	    height: 324/520*100%;
 	    background-image: url(images/lightning2.png);
 	    animation: lightning2  3.5s infinite ease 1s;
 	}
 	.lightning3 {
-	    top: -128px;
-	    left: 87px;
-	    width: 389px;
-	    height: 323px;
+	    bottom: 63%; //top: -128px;
+	    left: 14%; //87px;
+	    width: 389/614*100%;
+	    height: 323/520*100%;
 	    background-image: url(images/lightning3.png);
 	    animation: lightning3  5.5s infinite ease 2s;
 	}

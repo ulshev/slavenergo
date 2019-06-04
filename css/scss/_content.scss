@@ -2,7 +2,7 @@
 
 #top {
     z-index: 1;
-    background: #d3d1d2 no-repeat right center / cover;
+    background: #d3d1d2 no-repeat center / cover;
     margin-bottom: 5px;
     
     .in {
@@ -13,6 +13,7 @@
     .text {
 	max-width: 590px;
 	min-height: 309px;
+	width: 50%;
     }
     
     h1 {
@@ -33,6 +34,10 @@
     h2 {
 	margin-bottom: 32px;
 	clear: both;
+    }
+    
+    .button {
+	margin-bottom: 30px;
     }
 }
 
@@ -81,7 +86,8 @@
 }
 
 #quote {
-    //background:  url(images/quote_bg.jpg) no-repeat center / cover;
+    background:  url(images/quote_bg.jpg) no-repeat center / cover;
+    z-index: 2;
     .in {
 	padding-top: 93px;
 	padding-bottom: 35px;
@@ -147,16 +153,256 @@
     margin-bottom: 119px;
 }
 
-
+@media screen and (max-width: 1600px) {
+    #about_page #quote {
+	margin-bottom: 40px;
+    }
+}
 @media screen and (max-width: 1400px) {
+    .content {
+	.in {
+	    padding-top: 75px;
+	    padding-bottom: 0px;
+	}
+    }
     
+    .left {
+	margin: 0px 45px 60px 0;
+    }
+    .right {
+	margin: 0px 0 60px 45px;
+    }
+    
+    
+    .galery {
+	max-width: calc(50% + 20px);
+	margin-top: 20px;
+	
+	.photo {
+	    height: 400px;
+	}
+    }
+    
+    #quote {
+	.in {
+	    padding-top: 70px;
+	    padding-bottom: 35px;
+	}
+	.head {
+	    .ava {
+		width: 200px;
+		height: 200px;
+	    }
+	}
+	
+	h2 {
+	    padding: 35px;
+	    margin-top: 37px;
+	    margin-right: -20px;
+	}
+    }
+    
+    #about_page #quote {
+	margin-bottom: 0px;
+    }
 }
 @media screen and (max-width: 1000px) {
+    .content {
+	.in {
+	    padding-top: 50px;
+	    padding-bottom: 20px;
+	}
+    }
     
+    .left {
+	margin: 0px 45px 40px 0;
+    }
+    .right {
+	margin: 0px 0 40px 45px;
+    }
+    
+    
+    .galery {
+	margin-top: 20px;
+	padding: 0 24px;
+	
+	.photo {
+	    height: 300px;
+	}
+    }
+    
+    #quote {
+	.in {
+	    padding-top: 50px;
+	    padding-bottom: 35px;
+	}
+	.head {
+	    .ava {
+		width: 150px;
+		height: 150px;
+	    }
+	}
+	
+	h2 {
+	    max-width: 65%;
+	    background: none;
+	    padding: 0;
+	    //margin-top: 0;
+	    margin-right: 0;
+	}
+	
+	blockquote {
+	    padding: 20px 10px;
+	    //margin: 0 10px;
+	    
+	    &:before, &:after {
+		width: 37px;
+		height: 30px;
+		background-size: 100% auto;
+	    }
+	    
+	    &:before {
+		left: -35px;
+	    }
+	    
+	    &:after {
+		right: -35px;
+		bottom: 40px;
+	    }
+	}
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+    .left {
+	margin: 0px 25px 20px 0;
+    }
+    .right {
+	margin: 0px 0 20px 25px;
+    }
+    
+    
+    .galery {
+	float: none;
+	margin: 0 auto 30px;
+	max-width: 500px;
+	
+	.photo {
+	    height: 300px;
+	}
+    }
+    
+    .galery + h2, .galery + h3 {
+	margin-top: 30px;
+	margin-bottom: 25px;
+    }
 }
 
 @media screen and (max-width: 600px) {
     
+    #top {
+	z-index: 1;
+	//background-position: left center;
+	
+	.in {
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+	
+	.text {
+	    width: 55%;
+	    min-height: inherit;
+	}
+	
+	h1 {
+	    margin-bottom: 20px;
+	}
+	
+	p {
+	    margin-bottom: 20px;
+	}
+    }
+    
+    .left, .right {
+	margin: 0px 0 30px;
+	float: none;
+    }
+    
+    .galery {
+	padding: 0 18px;
+	margin-bottom: 20px;
+	
+	.photo {
+	    height: 250px;
+	}
+    }
+    .galery + h2, .galery + h3 {
+	margin-top: 20px;
+	margin-bottom: 15px;
+    }
+    
+    #quote {
+	.in {
+	    padding-top: 30px;
+	    padding-bottom: 35px;
+	}
+	.head {
+	    .ava {
+		width: 100px;
+		height: 100px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	    }
+	}
+	
+	h2 {
+	    max-width: 55%;
+	    margin-top: 0px;
+	    margin-bottom: 20px;
+	}
+	
+	blockquote {
+	    padding: 10px 10px;
+	    margin: 0 10px;
+	    
+	    &:before, &:after {
+		width: 27px;
+		height: 20px;
+	    }
+	    
+	    &:before {
+		left: -15px;
+	    }
+	    
+	    &:after {
+		right: -15px;
+		bottom: 20px;
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+    #top {
+	background-position: left center;
+	.in {
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+	
+	.text {
+	    width: auto;
+	}
+    }
+    
+    .galery {
+	.photo {
+	    height: 180px;
+	}
+    }
 }
 
 /* end content styles */

@@ -1,7 +1,7 @@
 /* start blog styles */ 
 
 #blog {
-    z-index: 1;
+    //z-index: 1;
     
     .in {
 	padding-top: 71px;
@@ -62,7 +62,7 @@
 		padding-top: 10px;
 		letter-spacing: 0;
 		font-weight: 600;
-		max-height: 145px;
+		max-height: 140px;
 		overflow: hidden;
 		a {
 		    text-decoration: none;
@@ -128,32 +128,142 @@
 	    .text {
 		margin-left: 0;
 		margin-right: 50%;
+		border-left: 1px solid #acacac;
+		border-right: 0;
 	    }
 	}
     }
+}
+
+@media screen and (max-width: 1800px) {
+    .articles {
+	.news {
+	    .text {
+		padding: 35px 35px;
+	    } 
+	    &:first-child {
+		.text {
+		    padding-right: 60px;
+		}
+	    }
+	}
+    }
+
 }
 
 
 @media screen and (max-width: 1400px) {
     #blog {
 	.in {
-	    padding-top: 71px;
-	    padding-bottom: 72px;
+	    padding-top: 60px;
+	    padding-bottom: 60px;
+	}
+    }
+    
+    .articles {
+	.news {
+	    .text {
+		padding: 35px 25px;
+		
+		h3 {
+		    max-height: 145px;
+		}
+	    } 
+	    &:first-child {
+		.text {
+		    padding-right: 25px;
+		}
+	    }
 	}
     }
 
 }
 @media screen and (max-width: 1000px) {
     #blog {
+	.in {
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	}
 	
+	h2 {
+	    width: auto;
+	}
+	
+	.all_link {
+	    float: right;
+	}
+    }
+    
+    .articles {
+	.news {
+	    width: auto;
+	    float: none;
+	    height: 275px;
+	    margin-bottom: 20px;
+	    .text {
+		padding: 25px 25px;
+		
+		h3 {
+		    max-height: 145px;
+		}
+	    } 
+	    &:first-child {
+		width: auto;
+		height: 320px;
+		margin-right: 0;
+		.text {
+		    padding-right: 25px;
+		}
+	    }
+	}
     }
 }
 
 @media screen and (max-width: 600px) {
     #blog {
 	.in {
-	    padding-top: 32px;
-	    padding-bottom: 40px;
+	    padding-top: 30px;
+	    padding-bottom: 0px;
+	}
+	h2 {
+	    margin-bottom: 10px;
+	}
+    }
+    
+    .articles {
+	.news {
+	    height: 200px;
+	    margin-bottom: 20px;
+		
+	    .img {
+		width: 30%;
+	    }
+	    .text {
+		padding: 20px;
+		margin-left: 30%;
+		
+		h3 {
+		    max-height: 95px;
+		    margin-bottom: 10px;
+		    line-height: 24px;
+		}
+	    } 
+	    &:first-child {
+		height: 250px;
+		.text {
+		    padding-right: 10px;
+		    
+		    p {
+			max-height: 61px;
+		    }
+		}
+	    }
+	    
+	    &:nth-child(3) {
+		.text {
+		    margin-right: 30%;
+		}
+	    }
 	}
     }
 }
