@@ -683,10 +683,12 @@ ul.slick-dots {
     }
 }
 
-
+#top .bread_crumbs {
+    margin-bottom: 45px;
+}
 .bread_crumbs {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 10px;
     
     ul li {
 	display: inline-block;
@@ -722,8 +724,11 @@ ul.slick-dots {
 }
 
 @media screen and (max-width: 1400px) {
-    .bread_crumbs {
+    #top .bread_crumbs {
 	margin-bottom: 25px;
+    }
+    
+    .bread_crumbs {
 	
 	ul li {
 	    &:before {

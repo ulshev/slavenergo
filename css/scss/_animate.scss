@@ -427,10 +427,10 @@
 #production.main_section.animated .prod_more_item .advantages { -webkit-animation-delay: 3s;  animation-delay: 3s; -webkit-animation-name: fadeIn; animation-name: fadeIn; }
 
 
-#promotions.main_section h2 { opacity: 0; }
-#promotions.main_section.animated h2 { -webkit-animation-delay: 0.0s;  animation-delay: 0.0s; -webkit-animation-name: fadeInLeft; animation-name: fadeInLeft; }
-#promotions.main_section .all_link { opacity: 0; }
-#promotions.main_section.animated .all_link { -webkit-animation-delay: 0.0s;  animation-delay: 0.0s; -webkit-animation-name: fadeInLeft; animation-name: fadeInLeft; }
+#index #promotions.main_section h2 { opacity: 0; }
+#index #promotions.main_section.animated h2 { -webkit-animation-delay: 0.0s;  animation-delay: 0.0s; -webkit-animation-name: fadeInLeft; animation-name: fadeInLeft; }
+#index #promotions.main_section .all_link { opacity: 0; }
+#index #promotions.main_section.animated .all_link { -webkit-animation-delay: 0.0s;  animation-delay: 0.0s; -webkit-animation-name: fadeInLeft; animation-name: fadeInLeft; }
 
 .promotions_images { opacity: 0; }
 .animated .promotions_images { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-delay: 0.5s;  animation-delay: 0.5s; -webkit-animation-name: fadeInRight; animation-name: fadeInRight; }

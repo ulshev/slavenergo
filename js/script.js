@@ -218,6 +218,16 @@ $(document).ready(function() {
 	    
 	});
 	
+	$('.promotions_block.slider').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    dots: false,
+	    //fade: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
+	
 	
 	$('.advantages_menu').slick({
 	    slidesToShow: 12,

@@ -27,18 +27,21 @@
 
 .content {
     .in {
-	padding-top: 105px;
+	padding-top: 51px;
 	padding-bottom: 51px;
     }
     
     h2 {
-	margin-bottom: 32px;
-	clear: both;
+	//margin-bottom: 32px;
+	//clear: both;
     }
     
     .button {
 	margin-bottom: 30px;
     }
+}
+#top + .content .in {
+    padding-top: 105px;
 }
 
 .left, .right {
@@ -51,18 +54,18 @@
 }
 .left {
     float: left;
-    margin: 0px 45px 112px 0;
+    margin: 0px 45px 60px 0;
 }
 .right {
     float: right;
     clear: right;
-    margin: 0px 0 112px 45px;
+    margin: 0px 0 60px 45px;
 }
 
 
 .galery {
     max-width: calc(50% + 49px);
-    margin-right: -31px;
+    //margin-right: -31px;
     margin-top: 39px;
     box-sizing: border-box;
     padding: 0 31px;
@@ -78,13 +81,19 @@
 	}
     }
 }
-
+.galery.left {
+    margin-left: -31px;
+}
+.galery.right {
+    margin-right: -31px;
+}
 .galery + h2, .galery + h3 {
     margin-top: 47px;
     letter-spacing: 0;
+}
+.galery + h3 {
     margin-bottom: 26px;
 }
-
 #quote {
     background:  url(images/quote_bg.jpg) no-repeat center / cover;
     z-index: 2;
@@ -161,9 +170,12 @@
 @media screen and (max-width: 1400px) {
     .content {
 	.in {
-	    padding-top: 75px;
-	    padding-bottom: 0px;
+	    padding-top: 45px;
+	    padding-bottom: 45px;
 	}
+    }
+    #top + .content .in {
+	padding-top: 75px;
     }
     
     .left {
@@ -209,11 +221,13 @@
 @media screen and (max-width: 1000px) {
     .content {
 	.in {
-	    padding-top: 50px;
+	    padding-top: 30px;
 	    padding-bottom: 20px;
 	}
     }
-    
+    #top + .content .in {
+	padding-top: 50px;
+    }
     .left {
 	margin: 0px 45px 40px 0;
     }
@@ -275,7 +289,9 @@
 }
 
 @media screen and (max-width: 800px) {
-    
+    #top + .content .in {
+	padding-top: 30px;
+    }
     .left {
 	margin: 0px 25px 20px 0;
     }
@@ -286,11 +302,15 @@
     
     .galery {
 	float: none;
-	margin: 0 auto 30px;
+	//margin: 0 auto 30px;
 	max-width: 500px;
 	
 	.photo {
 	    height: 300px;
+	}
+	
+	&.left, &.right {
+	    margin: 0 auto 30px;
 	}
     }
     
@@ -324,7 +344,9 @@
 	    margin-bottom: 20px;
 	}
     }
-    
+    #top + .content .in {
+	padding-top: 20px;
+    }
     .left, .right {
 	margin: 0px 0 30px;
 	float: none;
