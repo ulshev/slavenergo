@@ -64,7 +64,7 @@
 
 
 .galery {
-    max-width: calc(50% + 49px);
+    width: calc(50% + 49px);
     //margin-right: -31px;
     margin-top: 39px;
     box-sizing: border-box;
@@ -187,7 +187,7 @@
     
     
     .galery {
-	max-width: calc(50% + 20px);
+	width: calc(50% + 20px);
 	margin-top: 20px;
 	
 	.photo {
@@ -304,6 +304,7 @@
 	float: none;
 	//margin: 0 auto 30px;
 	max-width: 500px;
+	width: auto;
 	
 	.photo {
 	    height: 300px;

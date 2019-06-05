@@ -5377,7 +5377,7 @@ ul.advantages_block li strong:first-letter {
 }
 
 .galery {
-  max-width: calc(50% + 49px);
+  width: calc(50% + 49px);
   margin-top: 39px;
   box-sizing: border-box;
   padding: 0 31px;
@@ -5495,7 +5495,7 @@ ul.advantages_block li strong:first-letter {
   }
 
   .galery {
-    max-width: calc(50% + 20px);
+    width: calc(50% + 20px);
     margin-top: 20px;
   }
   .galery .photo {
@@ -5592,6 +5592,7 @@ ul.advantages_block li strong:first-letter {
   .galery {
     float: none;
     max-width: 500px;
+    width: auto;
   }
   .galery .photo {
     height: 300px;
