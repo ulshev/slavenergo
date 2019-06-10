@@ -5911,17 +5911,13 @@ aside.right {
   max-width: 1546px;
   margin: 0 auto;
   padding-top: 250px;
-  padding-right: 30px;
   height: 780px;
   box-sizing: border-box;
 }
 #page404 .content h1 {
   font-size: 109px;
   line-height: 100px;
-  font-weight: 800;
-  color: #000;
-  padding-right: 12px;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
 }
 #page404 .content p {
   margin-bottom: 30px;
@@ -5982,6 +5978,16 @@ aside.right {
   .right_indent {
     margin-right: 39%;
   }
+
+  #page404 .content .text {
+    padding-top: 200px;
+    height: 680px;
+  }
+  #page404 .content h1 {
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: 6px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .content .in {
@@ -6038,6 +6044,30 @@ aside.right {
     right: -35px;
     bottom: 40px;
   }
+
+  aside.right {
+    width: 100%;
+    max-width: none;
+    min-width: inherit;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
+
+  .right_indent {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  #page404 .content .text {
+    padding-top: 125px;
+    height: 500px;
+  }
+  #page404 .content h1 {
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: 4px;
+  }
 }
 @media screen and (max-width: 800px) {
   #top + .content .in {
@@ -6067,6 +6097,19 @@ aside.right {
   .galery + h2, .galery + h3 {
     margin-top: 30px;
     margin-bottom: 25px;
+  }
+
+  #page404 .content {
+    background-position: 20% center;
+  }
+  #page404 .content .text {
+    padding-top: 75px;
+    height: 350px;
+  }
+  #page404 .content h1 {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 2px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -6139,6 +6182,16 @@ aside.right {
   #quote blockquote:after {
     right: -15px;
     bottom: 20px;
+  }
+
+  #page404 .content .text {
+    padding-top: 50px;
+    height: 290px;
+  }
+  #page404 .content h1 {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -6281,6 +6334,10 @@ aside .articles .news h4, aside .articles .news p {
   margin-bottom: 0;
   letter-spacing: 0;
 }
+aside .articles .news h4 {
+  height: 60px;
+  overflow: hidden;
+}
 aside .articles .news time {
   display: inline-block;
   padding-left: 25px;
@@ -6293,6 +6350,38 @@ aside .articles .news a {
 }
 aside .articles .news a:hover {
   text-decoration: underline;
+}
+aside .articles .slick-arrow {
+  top: auto;
+  margin-top: 0;
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  left: 50%;
+  bottom: -30px;
+}
+aside .articles .slick-arrow:before {
+  display: none;
+}
+aside .articles .slick-prev {
+  border-top: 10px solid #ebebeb;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-radius: 0 0 2px 2px / 0 0 9px 9px;
+  margin-left: -35px;
+}
+aside .articles .slick-prev:hover {
+  border-top-color: #cc0038;
+}
+aside .articles .slick-next {
+  border-bottom: 10px solid #ebebeb;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-radius: 2px 2px 0 0 / 9px 9px 0 0;
+  margin-left: 20px;
+}
+aside .articles .slick-next:hover {
+  border-bottom-color: #cc0038;
 }
 
 @media screen and (max-width: 1800px) {
@@ -6631,13 +6720,14 @@ aside .articles .news a:hover {
 .right_indent.maps_container {
   float: left;
   margin-right: 0;
-  width: 56.34%;
+  width: 58%;
 }
 .right_indent.maps_container .map_info {
   position: absolute;
   top: 0;
   left: 0;
   width: 480px;
+  max-width: 100%;
   background: #fff;
   padding: 35px 35px 20px;
   box-sizing: border-box;
@@ -6670,10 +6760,29 @@ aside .articles .news a:hover {
   display: none;
 }
 
-.right_indent.maps_container + .right .form_block {
+.right_indent.maps_container + aside.right {
+  width: 37%;
+}
+.right_indent.maps_container + aside.right .form_block {
   padding-top: 0;
 }
 
+@media screen and (max-width: 1350px) {
+  .right_indent.maps_container {
+    float: none;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .right_indent.maps_container + aside.right {
+    float: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .right_indent.maps_container + aside.right {
+    width: 100%;
+  }
+}
 /* end contacts styles */
 /* start animate styles */
 @-webkit-keyframes fadeInUp {

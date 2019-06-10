@@ -225,9 +225,7 @@ aside.right {
 	.text {
 	    max-width: $max-width;
 	    margin: 0 auto;
-	    //text-align: center;
 	    padding-top: 250px;
-	    padding-right: 30px;
 	    height: 780px;
 	    box-sizing: border-box;
 	}
@@ -235,12 +233,7 @@ aside.right {
 	h1 {
 	    font-size: 109px;
 	    line-height: 100px;
-	    //height: 200px;
-	    font-weight: 800;
-	    //margin-bottom: 18px;
-	    color: #000;
-	    padding-right: 12px;
-	    letter-spacing: 10px;
+	    letter-spacing: 8px;
 	}
 	
 	p {
@@ -309,6 +302,21 @@ aside.right {
     
     .right_indent {
 	margin-right: 39%;
+    }
+    
+    #page404 {
+	.content {
+	    .text {
+		padding-top: 200px;
+		height: 680px;
+	    }
+	    
+	    h1 {
+		font-size: 90px;
+		line-height: 90px;
+		letter-spacing: 6px;
+	    }
+	}
     }
 }
 @media screen and (max-width: 1000px) {
@@ -379,6 +387,36 @@ aside.right {
 	}
     }
     
+    
+    aside.right {
+	width: 100%;
+	max-width: none;
+	min-width: inherit;
+	float: none;
+	margin-left: 0;
+	margin-bottom: 80px;
+    }
+    
+    .right_indent {
+	margin-right: 0;
+	margin-bottom: 50px;
+    }
+    
+    #page404 {
+	.content {
+	    .text {
+		padding-top: 125px;
+		height: 500px;
+	    }
+	    
+	    h1 {
+		font-size: 70px;
+		line-height: 70px;
+		letter-spacing: 4px;
+	    }
+	}
+    }
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -411,6 +449,22 @@ aside.right {
     .galery + h2, .galery + h3 {
 	margin-top: 30px;
 	margin-bottom: 25px;
+    }
+    
+    #page404 {
+	.content {
+	    background-position: 20% center;
+	    .text {
+		padding-top: 75px;
+		height: 350px;
+	    }
+	    
+	    h1 {
+		font-size: 50px;
+		line-height: 50px;
+		letter-spacing: 2px;
+	    }
+	}
     }
 }
 
@@ -495,6 +549,21 @@ aside.right {
 	    &:after {
 		right: -15px;
 		bottom: 20px;
+	    }
+	}
+    }
+    
+    #page404 {
+	.content {
+	    .text {
+		padding-top: 50px;
+		height: 290px;
+	    }
+	    
+	    h1 {
+		font-size: 40px;
+		line-height: 40px;
+		letter-spacing: 2px;
 	    }
 	}
     }

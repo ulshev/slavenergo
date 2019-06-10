@@ -50,13 +50,14 @@
 .right_indent.maps_container {
     float: left;
     margin-right: 0;
-    width: 100% - 43.66%;
+    width: 58%;
     
     .map_info {
         position: absolute;
         top: 0;
         left: 0;
         width: 480px;
+        max-width: 100%;
         background: #fff;
         padding: 35px 35px 20px;
         box-sizing: border-box;
@@ -99,18 +100,29 @@
     
 }
 
-.right_indent.maps_container + .right {
+.right_indent.maps_container + aside.right {
+    width: 37%;
     .form_block {
         padding-top: 0;
     }
 }
 
 
-@media screen and (max-width: 1400px) {
-    
+@media screen and (max-width: 1350px) {
+    .right_indent.maps_container {
+        float: none;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .right_indent.maps_container + aside.right {
+        //width: 100%;
+        float: none;
+    }
 }
-@media screen and (max-width: 1100px) {
-    
+@media screen and (max-width: 1000px) {
+    .right_indent.maps_container + aside.right {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 800px) {

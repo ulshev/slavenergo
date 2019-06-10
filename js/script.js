@@ -398,6 +398,17 @@ $(document).ready(function() {
 		]
 	});
 	
+	$('.articles.slider').slick({
+	    slidesToShow: 4,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    dots: false,
+	    //infinite: true,
+	    vertical: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
+	
 	$('.products_images .main_img').slick({
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
