@@ -64,7 +64,6 @@
 
 
 .galery {
-    width: calc(50% + 49px);
     //margin-right: -31px;
     margin-top: 39px;
     box-sizing: border-box;
@@ -86,6 +85,10 @@
 }
 .galery.right {
     margin-right: -31px;
+}
+
+.galery.left, .galery.right {
+    width: calc(50% + 49px);
 }
 .galery + h2, .galery + h3 {
     margin-top: 47px;
@@ -162,6 +165,90 @@
     margin-bottom: 119px;
 }
 
+aside.right {
+    width: 39%;
+    max-width: 500px;
+    min-width: 400px;
+}
+
+.right_indent {
+    margin-right: 43.66%;
+    
+    time {
+	float: right;
+	font-size: 14px;
+	font-weight: 300;
+	padding: 10px 0 10px 25px;
+	margin-top: 20px;
+	background: url(images/icon_time.png) no-repeat left center;
+    }
+    
+    .text_image + time {
+	float: none;
+    }
+    
+    .button, .more {
+	vertical-align: middle;
+	margin-bottom: 20px;
+	display: inline-block;
+	margin-right: 40px;
+	margin-top: 20px;
+    }
+}
+
+.text_image {
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+    margin-bottom: 20px;
+    img {
+	width: 100%;
+	
+    }
+}
+
+
+
+
+#page404 {
+    .content {
+	background: #dde1e3 url(images/page404_bg.jpg) no-repeat center / cover;
+	display: table-row;
+	height: 100%;
+	
+	.in {
+	    display: table-cell;
+	    height: 100%;
+	    vertical-align: middle;
+	}
+	
+	.text {
+	    max-width: $max-width;
+	    margin: 0 auto;
+	    //text-align: center;
+	    padding-top: 250px;
+	    padding-right: 30px;
+	    height: 780px;
+	    box-sizing: border-box;
+	}
+	
+	h1 {
+	    font-size: 109px;
+	    line-height: 100px;
+	    //height: 200px;
+	    font-weight: 800;
+	    //margin-bottom: 18px;
+	    color: #000;
+	    padding-right: 12px;
+	    letter-spacing: 10px;
+	}
+	
+	p {
+	    margin-bottom: 30px;
+	}
+    }
+}
+
 @media screen and (max-width: 1600px) {
     #about_page #quote {
 	margin-bottom: 40px;
@@ -187,12 +274,14 @@
     
     
     .galery {
-	width: calc(50% + 20px);
 	margin-top: 20px;
 	
 	.photo {
 	    height: 400px;
 	}
+    }
+    .galery.left, .galery.right {
+	width: calc(50% + 20px);
     }
     
     #quote {
@@ -216,6 +305,10 @@
     
     #about_page #quote {
 	margin-bottom: 0px;
+    }
+    
+    .right_indent {
+	margin-right: 39%;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -303,7 +396,6 @@
     .galery {
 	float: none;
 	//margin: 0 auto 30px;
-	max-width: 500px;
 	width: auto;
 	
 	.photo {
@@ -312,6 +404,7 @@
 	
 	&.left, &.right {
 	    margin: 0 auto 30px;
+	    max-width: 500px;
 	}
     }
     

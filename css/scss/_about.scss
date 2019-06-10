@@ -131,6 +131,7 @@
     
     .poll {
 	text-align: center;
+	clear: both;
 	
 	a {
 	    color: #fff;
@@ -260,7 +261,7 @@
 	    
 	    &.left {
 		left: auto;
-		margin-right: 7%;
+		margin-right: 5%;
 	    }
 	    &.right {
 		right: auto;

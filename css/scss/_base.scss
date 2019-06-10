@@ -70,11 +70,11 @@ body {
  //   }
 //}
 
-//#page404 {
-//    .wrapper {
-//	display: table;
-//    }
-//}
+#page404 {
+    .wrapper {
+	display: table;
+    }
+}
 
 a {
     text-decoration: underline;
@@ -167,10 +167,12 @@ h6, .h6 {
     h2, .h2 {
         font-size: 22px;
 	line-height: 35px;
+	margin-bottom: 20px;
     }
     h3, .h3 {
         font-size: 18px;
 	line-height: 35px;
+	margin-bottom: 20px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -181,8 +183,6 @@ h6, .h6 {
     h1 {
 	font-size: 20px;
 	line-height: 120%;
-	margin-bottom: 20px;
-	letter-spacing: 1.0px;
     }
     h2, .h2 {
         font-size: 18px;
@@ -581,12 +581,12 @@ ul.slick-dots {
 @media screen and (max-width: 1100px) {
     
     .in {
-	padding: 0px 80px;
+	padding: 0px 30px;
     }
 }
 @media screen and (max-width: 800px) {
     .in {
-	padding: 0px 40px;
+	padding: 0px 20px;
     }
 }
 @media screen and (max-width: 450px) {
@@ -633,6 +633,16 @@ ul.slick-dots {
 	    font-size: 12px;
 	    font-weight: 400;
 	}
+    }
+}
+
+.calculation {
+    a {
+	background: url(images/icon_calculation.png) no-repeat left center;
+	padding: 5px 0 5px 32px;
+	display: inline-block;
+	line-height: 16px;
+	font-weight: 600;
     }
 }
 
@@ -739,3 +749,101 @@ ul.slick-dots {
 	}
     }
 }
+
+
+.pagination {
+    margin-bottom: 50px;
+    text-align: center;
+    li {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: 500;
+	margin: 0 10px;
+	
+	
+	a {
+	    display: block;
+	    text-decoration: none;
+	    overflow: hidden;
+	    
+	    &:hover {
+		text-decoration: underline;
+	    } 
+		
+	    &.active {
+		color: $color_a_hover;
+		font-size: 20px;
+		font-weight: 700;
+	    }
+	}
+	
+	&.pag-ar {
+	    margin: 0 20px -2px;
+	    
+	    a {
+		text-indent: -16px;
+		position: relative;
+		background: none;
+		line-height: 16px;
+		
+		&:after {
+		    content: "";
+		    display: inline-block;
+		    position: relative;
+		    width: 0;
+		    height: 0;
+		    margin: 0 2px;
+		    @include transition(all);
+		}
+	    }
+	}
+	
+	&.prev {
+	    a {
+		&:after {
+		    border-top: 9px solid transparent;
+		    border-right: 10px solid $color_a_hover;
+		    //border-left: 2px solid $color_a_hover;
+		    border-bottom: 9px solid transparent;
+		    border-radius: 0 9px 9px 0 / 0 2px 2px 0;
+		}
+		
+	    }
+	}
+	&.next {
+	    a {
+		&:after {
+		    border-top: 9px solid transparent;
+		    border-left: 10px solid $color_a_hover;
+		    //border-right: 2px solid $color_a_hover;
+		    border-bottom: 9px solid transparent;
+		    border-radius: 9px 0 0 9px / 2px 0 0 2px;
+		}
+	    }
+	}
+    }
+}
+@media screen and (max-width: 600px) {
+    .pagination {
+	margin-bottom: 30px;
+	li {
+	    margin: 0 10px;
+	    
+	    &.pag-ar {
+		margin: 0 0px -2px;
+	    }
+	    &.prev {
+		margin-right: 20px;
+	    }
+	    &.next {
+		margin-left: 20px;
+	    }
+	}
+    }
+}
+
+
+
+
+

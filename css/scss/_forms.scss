@@ -36,20 +36,27 @@
 .form_block {
     .uFormLine {
 	//float: left;
-	margin-left: 25px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	position: relative;
-	width: calc(100% - 25px);
+	//width: calc(100% - 25px);
 	overflow: hidden;
 	
-	&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+	&:nth-child(2), &:nth-child(3) {
 	    float: left;
-	    width: calc(50% - 25px);
+	    width: calc(50% - 12px);
+	}
+	
+	&:nth-child(3) {
+	    margin-left: 24px;
+	}
+	
+	&:nth-child(4) {
+	    clear: both;
 	}
 	
 	&:nth-child(6) {
-	    float: left;
-	    width: auto;
+	    //float: left;
+	    //width: auto;
 	}
     }
     
@@ -59,7 +66,7 @@
 	width: 100%;
 	max-width: 100%;
 	background: rgba(255, 255, 255, 0.65);
-	border: 0;
+	border: 1px solid #e7e7e7;
 	box-sizing: border-box;
 	color: #000;
 	font-family: $font_family_os;
@@ -73,6 +80,19 @@
 	&::-moz-placeholder          {opacity: 1; color: #000;}/* Firefox 19+ */
 	&:-moz-placeholder           {opacity: 1; color: #000;}/* Firefox 18- */
 	&:-ms-input-placeholder      {opacity: 1; color: #000;}
+    }
+    
+    .input_file {
+	float: left;
+	padding-top: 5px;
+	margin-right: 20px;
+	width: 55%;
+	margin-bottom: 0;
+	line-height: 24px;
+    }
+    
+    .input_file + .uFormLine {
+	text-align: right;
     }
     
     input[type="file"] {
@@ -91,12 +111,12 @@
     }
 
     textarea {
-	height: 113px;
-	width: 869px;
+	height: 71px;
+	//width: 869px;
 	line-height: 26px;
     }
     
-    .check {
+    /*.check {
 	position: relative;
 	font-weight: 300;
 	font-size: 14px;
@@ -107,7 +127,7 @@
 	padding-left: 34px;
 	margin-right: 20px;
 	opacity: 0.8;
-    }
+    }*/
 
     input[type="radio"], input[type="checkbox"] {
 	width: auto;
@@ -158,10 +178,10 @@
     }
     
     .feedback-form-bot {
-	float: right;
+	//float: right;
 	padding-top: 5px;
 	position: relative;
-	margin-left: 25px;
+	margin-top: -5px;
     }
 
     .button_block {
@@ -172,8 +192,8 @@
 
     .uFormButton {
 	clear: both;
-	text-align: right;
-	padding-top: 13px;
+	//text-align: right;
+	//padding-top: 13px;
     }
     
     button[type="submit"], .gUniForm .uFormSubmit, .gUniFormSuccessButton {
@@ -213,11 +233,65 @@
 	    }
 	}
     }
-  
+}
 
-}    
+aside {
+    .form_block {
+	padding-top: 25px;
+	
+	h4 {
+	    margin-bottom: 20px;
+	}
+	p {
+	    margin-bottom: 25px;
+	}
+    }
+}
 
-
+#main_form {
+    .form_block {
+	.uFormLine {
+	    margin-left: 25px;
+	    margin-bottom: 20px;
+	    width: calc(100% - 25px);
+	    
+	    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+		float: left;
+		width: calc(50% - 25px);
+	    }
+	    &:nth-child(4) {
+		clear: none;
+	    }
+	    
+	    &:nth-child(6) {
+		float: left;
+		width: auto;
+	    }
+	}
+	
+	input, textarea {
+	    border: 0;
+	}
+	
+	input[type="file"] {
+	    border: 1px solid $color_a_hover;
+	}
+	
+	textarea {
+	    height: 113px;
+	}
+	
+	.feedback-form-bot {
+	    float: right;
+	    margin-left: 25px;
+	    margin-top: 0;
+	}
+	.uFormButton {
+	    text-align: right;
+	    padding-top: 13px;
+	}
+    }
+}
 
 
 
@@ -282,6 +356,37 @@
     
 }
 @media screen and (max-width: 1000px) {
+    .form_block {
+	.uFormLine {
+	    margin-bottom: 20px;
+	    
+	    &:nth-child(2), &:nth-child(3) {
+		float: none;
+		width: auto;
+	    }
+	    
+	    &:nth-child(3) {
+		margin-left: 0;
+	    }
+	    
+	    &:nth-child(4) {
+		clear: both;
+	    }
+	}
+	
+	.input_file {
+	    float: none;
+	    padding-top: 0px;
+	    margin-right: 0px;
+	    width: auto;
+	    margin-bottom: 10px;
+	}
+	
+	.input_file + .uFormLine {
+	    text-align: left;
+	}
+    }
+    
     #main_form {
 	.in {
 	    padding-top: 40px;
@@ -316,18 +421,15 @@
 	
 	.form_block {
 	    margin-left: 41%;
-	}
-    }
-    
-    .form_block {
-	.uFormLine {
-	    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-		float: none;
-		width: calc(100% - 25px);
-	    }
-	    
-	    &:nth-child(6) {
-		float: none;
+	    .uFormLine {
+		&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+		    float: none;
+		    width: calc(100% - 25px);
+		}
+		
+		&:nth-child(6) {
+		    float: none;
+		}
 	    }
 	}
     }
@@ -351,23 +453,21 @@
 	
 	.form_block {
 	    margin-left: 0;
-	}
-    }
-    .form_block {
-	.uFormLine {
-	    margin-left: 0;
-	    width: 100%;
-	    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+	    .uFormLine {
+		margin-left: 0;
 		width: 100%;
+		&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+		    width: 100%;
+		}
 	    }
-	}
-	.feedback-form-bot {
-	    float: none;
-	    margin-left: 0;
-	}
-	.uFormButton {
-	    text-align: left;
-	    padding-top: 0px;
+	    .feedback-form-bot {
+		float: none;
+		margin-left: 0;
+	    }
+	    .uFormButton {
+		text-align: left;
+		padding-top: 0px;
+	    }
 	}
     }
 }

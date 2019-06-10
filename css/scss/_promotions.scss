@@ -1,15 +1,20 @@
 /* start promotions styles */ 
 
 #promotions {
-    //z-index: 0;
-    
     .in {
-	padding-top: 119px;
-	padding-bottom: 119px;
+	padding-top: 30px;
+	padding-bottom: 0px;
     }
     
     .all_link {
 	float: right;
+    }
+}
+
+#index #promotions {
+    .in {
+	padding-top: 119px;
+	padding-bottom: 119px;
     }
 }
 
@@ -24,7 +29,7 @@
     
     .all_link {
 	margin-top: 71px;
-	float: none;
+	//float: none;
     }
 }
 
@@ -193,7 +198,7 @@
 
 
 @media screen and (max-width: 1600px) {
-    #promotions {
+    #index  #promotions {
 	h2 {
 	    margin-top: 29px;
 	    margin-left: 282px;
@@ -209,7 +214,7 @@
     }
 }
 @media screen and (max-width: 1400px) {
-    #promotions {
+    #index  #promotions {
 	.in {
 	    padding-top: 73px;
 	    padding-bottom: 73px;
@@ -217,7 +222,7 @@
 	h2 {
 	    margin-top: 20px;
 	    margin-left: 273px;
-	    left: 29.1%;
+	    //left: 29.1%;
 	}
 	.all_link {
 	    margin-top: 22px;
@@ -273,11 +278,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-    #promotions {
-	.in {
-	    padding-top: 73px;
-	    padding-bottom: 73px;
-	}
+    #index #promotions {
 	h2 {
 	    margin-top: 0;
 	    margin-left: 0;
@@ -330,15 +331,14 @@
     
 }
 @media screen and (max-width: 800px) {
-    #promotions {
-	
-    }
     
     .promotions_images {
 	float: none;
 	height: 300px;
 	width: auto;
-	margin: 0 20px 30px;
+	padding: 0 20px 0px;
+	
+	margin-bottom: 30px;
 	.promotions_img {
 	    height: 300px;
 	}
@@ -375,13 +375,21 @@
 	    padding-top: 20px;
 	    padding-bottom: 30px;
 	}
+    }
+    #index #promotions {
+	.in {
+	    padding-top: 20px;
+	    padding-bottom: 30px;
+	}
 	h2 {
 	    margin-bottom: 13px;
 	}
     }
     .promotions_images {
 	height: 240px;
-	margin: 0 20px 20px;
+	padding: 0 20px 0px;
+	
+	margin-bottom: 20px;
 	.promotions_img {
 	    height: 240px;
 	}
@@ -421,7 +429,8 @@
     
     .promotions_images {
 	height: 175px;
-	margin: 0 20px 10px;
+	padding: 0 20px 0px;
+	margin-bottom: 10px;
 	.promotions_img {
 	    height: 175px;
 	}

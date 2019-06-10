@@ -23,7 +23,7 @@
     }
 }
 
-.articles {
+.main_section .articles {
     .news {
 	float: left;
 	width: 55.5%;
@@ -135,8 +135,38 @@
     }
 }
 
+aside {
+    .tab_buttons {
+	margin-bottom: 10px;
+    }
+    .articles .news {
+	padding: 25px 0;
+	border-bottom: 1px solid #f4f4f4;
+	
+	h4, p {
+	    margin-bottom: 0;
+	    letter-spacing: 0;
+	}
+	
+	time {
+	    display: inline-block;
+	    padding-left: 25px;
+	    font-size: 14px;
+	    font-weight: 300;
+	    background: url(images/icon_time.png) no-repeat left center;
+	}
+	
+	a {
+	    text-decoration: none;
+	    &:hover {
+		text-decoration: underline;
+	    }
+	}
+    }
+}
+
 @media screen and (max-width: 1800px) {
-    .articles {
+    .main_section .articles {
 	.news {
 	    .text {
 		padding: 35px 35px;
@@ -160,7 +190,7 @@
 	}
     }
     
-    .articles {
+    .main_section .articles {
 	.news {
 	    .text {
 		padding: 35px 25px;
@@ -194,7 +224,7 @@
 	}
     }
     
-    .articles {
+    .main_section .articles {
 	.news {
 	    width: auto;
 	    float: none;
@@ -230,7 +260,7 @@
 	}
     }
     
-    .articles {
+    .main_section .articles {
 	.news {
 	    height: 200px;
 	    margin-bottom: 20px;

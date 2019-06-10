@@ -24,7 +24,7 @@
     <script type="text/javascript" src="js/zoomsl-3.0.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script> 
 </head>
-<body id="about_page"><!-- id=about_page должен быть только на этой странице -->
+<body>
     <div class="wrapper">
 	<!-- шапка -->
 	<div id="logo">
@@ -108,7 +108,7 @@
 				    <li><a href="blog.html">Блог</a></li>
 				</ul>
 			    </li>
-			    <li class="active">
+			    <li>
 				<a href="services.html">Услуги</a>
 				<ul>
 				    <li><a href="services_item.html">Замеры параметров электроэнергии</a></li>
@@ -124,7 +124,7 @@
 			    <li>
 				<a href="reviews.html">Отзывы</a>
 			    </li>
-			    <li>
+			    <li class="active">
 				<a href="contacts.html">Контакты</a>
 			    </li>
 			    
@@ -222,187 +222,406 @@
 	    </ul>
 	</nav>
         
-        
-        <div id="top" style="background-image: url('images/service_top_img1.jpg')">
+        <main class="content">
             <div class="in">
                 <div class="bread_crumbs">
 		    <ul>
 			<li><a href="index.html">Главная</a></li>
-			<li><a href="services.html">Услуги</a></li>
-			<li><span>Замеры качества электроэнергии</span></li>
+			<li><span>Контакты</span></li>
 		    </ul>
 		</div>
-                <div class="text">
-                    <h1>H1 Замеры качества электроэнергии</h1>
-                    <p>«СлавЭнерго» находится в числе лидеров российского рынка по реализации проектов повышения качества электроэнергии и внедрению надежного распределительного оборудования в сети.</p>
-                    <a href="#" class="button">Заказать</a>
-                </div>
+                <h1>Контакты</h1>
+		<div class="cont">
+		    <div class="tel">
+			<a href="tel:+74852648596">+7(4852) 64-85-96</a>
+		    </div>
+		    <div class="mail">
+			<a href="mailto:info@slavenergo.ru">info@slavenergo.ru</a>
+		    </div>
+		</div>
                 
-            </div>
-        </div>
-        
-        <main class="content">
-            <div class="in">
-                <div class="text">
-                    <p>Электротехническая компания «СлавЭнерго» находится в числе лидеров российского рынка по реализации проектов повышения качества электроэнергии и внедрению надежного распределительного оборудования в сети. Высокое качество продукции, выгодные цены и условия работы позволили компании приобрести множество постоянных клиентов в России и ближнем зарубежье. Предприятие располагает несколькими цехами по производству сухих силовых трансформаторов и электрощитового оборудования (конденсаторные установки, вводно-распределительные устройства, фильтры гармоник).</p>
-                    
-                    <div class="left galery">
-                        <div class="photo">
-                            <img src="images/photo3.jpg" alt="">
-                        </div>
-                        <div class="photo">
-                            <img src="images/photo2.jpg" alt="">
-                        </div>
-                        <div class="photo">
-                            <img src="images/photo1.jpg" alt="">
-                        </div> 
-                    </div>
-                    
-                    <h2>Замеры качества электроэнергии</h2>
-                    <ul>
-                        <li>Выезд инженера с прибором измерения параметров электросети, нетбуком и всеми необходимыми компьютерными программами</li>
-                        <li>Измерения длительностью от 1 до 10 суток. Частота выборки от секундной до нескольких раз в секунду</li>
-			<li>Обработка результатов: приведение полученных цифровых данных в графический вид, построение диаграмм</li>
-			<li>Внедрение активных фильтров гармоник или конденсаторных установок компенсации реактивной мощности рекомендаций по проведенным замерам</li>
-                    </ul>
-                    <a href="#" class="button">Заказать</a>
-                    
-                    <p class="clear">Компания "СлавЭнерго" существует уже более 10-ти лет, в течение которых удалось наладить серийное изготовление сухих силовых трансформаторов и электрощитового оборудования для предприятий самых разных отраслей экономики .Электротехническая компания «СлавЭнерго» находится в числе лидеров российского рынка по реализации проектов повышения качества электроэнергии и внедрению надежного распределительного оборудования в сети. Высокое качество продукции, выгодные цены и условия работы позволили компании приобрести множество постоянных клиентов в России и ближнем зарубежье. </p>
-                </div>
+                <div class="text right_indent maps_container">
+		    <div class="tabs_container">
+			<div class="tab_buttons">
+			    <span class="tab_but active">Цетральный офис</span>
+			    <span class="tab_but">Производство</span>
+			    <span class="tab_but">Георгафия поставок</span>
+			</div>
+			<div class="tab active">
+			    <div id="map1" class="map">
+			    </div>
+				<div class="map_info">
+				    <div class="cont">
+					<div class="address">150000, г. Ярославль,<br>
+					ул. Трефолева, 24а, 3 этаж, офис № 13,<br>
+					<span class="small">торгово-офисный центр "Казанский" (центр города)</span></div>
+					<div class="tel">
+					    <a href="tel:+74852648596">+7(4852) 64-85-96</a> <br>
+					    <a href="tel:88005552023">8-800-555-20-23</a>
+					    <span class="small">(бесплатно с мобильных)</span>
+					</div>
+					<div class="work_time">
+					    пн-пт 9:00-18.00<br>
+					    <span class="small">время московское</span>
+					</div>
+				    </div>
+				</div>
+			</div>
+			<div class="tab">
+			    <div id="map2" class="map">
+				<div class="map_info">
+				    <h4>Производственный участок 1</h4>
+				    <p><span class="small">сборка конденсаторных установок и другого электротехнического оборудования</span></p>
+				    <div class="cont">
+					<div class="address">г. Ярославль, ул. Промышленная, д.1, с.3
+					<span class="small">территория ЯЗТО </span></div>
+					<div class="tel">
+					    <a href="tel:+74852648596">+7(4852) 64-85-96</a> <br>
+					    <span class="small">для проезда необходимо заказать пропуск по тел. </span>
+					</div>
+				    </div>
+				    <h4>Производственный участок 2</h4>
+				    <p><span class="small">металлообрабатывающий цех</span></p>
+				    <div class="cont">
+					<div class="address">Ярославская область, п. Прохоровское</div>
+				    </div>
+				    <a class="map_link" href="#">Посмотреть на карте</a>
+				</div>
+			    </div>
+			</div>
+			
+			<div class="tab">
+			    <div id="map3" class="map">
+				<div class="map_info">
+				    <h4>География поставок</h4>
+				    <p><span class="small">Информация по доставке конденсаторных установок, ВРУ и трансформаторов в города России</span></p>
+				    <ul class="cities">
+					<li id="moscow"><a class="map_link" href="#">Москва</a></li>
+					<li id="petersburg"><a class="map_link" href="#">Санкт-Петербург</a></li>
+					<li id="ekaterinburg"><a class="map_link" href="#">Екатеринбург</a></li>
+					<li id="rostov-on-don"><a class="map_link" href="#">Ростов-на-Дону</a></li>
+				    </ul>
+				    <p><span class="small">Информация по другим городам и регионам России доступна на странице доставки</span></p>
+				    <a class="map_link" href="#">Подробнее о доставке</a>
+				</div>
+			    </div>
+			</div>
+		    </div>
+		</div> 
+		
+		<aside class="right">
+		    <div class="form_block">
+			<h4>Оставьте заявку</h4>
+			<p>Оформите заявку на сайте, и мы свяжемся с вами в самое ближайшее время, а также ответим на все ваши вопросы</p>
+			<form method="post">
+			    <div class="uFormLine">
+	    			<div class="uError"></div>
+    				<input type="text" value="" placeholder="Ф.И.О">
+			    </div>
+		    	    <div class="uFormLine">
+	    			<div class="uError"></div>
+    				<input type="text" value="" placeholder="Название компании">
+			    </div>
+		    	    <div class="uFormLine">
+	    			<div class="uError"></div>
+    				<input type="text" value="" placeholder="Телефон">
+			    </div>
+		    	    <div class="uFormLine">
+	    			<div class="uError"></div>
+    				<input type="text" value="" placeholder="E-mail">
+			    </div>
+		    	    <p class="input_file">Вы можете отправить вложение</p>
+	    		    <div class="uFormLine">
+    				<div class="uError"></div>
+				<input type="file" value="">
+		            </div>
+	    		    <div class="uFormLine">
+    				<div class="uError"></div>
+				<textarea placeholder="Сообщение"></textarea>
+			    </div>
+		    	    <div class="feedback-form-bot">
+	    			<div class="feedback-form-bot-consent">
+    				    <div class="order-form-bot-check">
+					<input type="checkbox" id="123" name="personalInfo" data-required="Y" value="Y" checked="">
+				    	<label for="123">Я согласен(а) на обработку <a href="/personal-info/" target="_blank" rel="nofollow noopener">персональных данных</a></label>
+			    	    </div>
+		    		</div>
+	    		    </div>
+    			    <div class="uFormGlobalErrors"></div>
+				<div class="uFormButton">
+			    	<button type="submit" class="uFormSubmit">Отправить</button>
+		    	    </div>
+	    		</form>
+    		    </div>
+		</aside>
+		
             </div>
         </main>
-	
-	<!-- Акции -->
-	<div class="main_section" id="promotions">
-	    <div class="in">
-		<a href="promotions.html" class="all_link">Все акции</a>
-		<h2>Акции</h2>
-		
-		<div class="promotions_block slider">
-		    <div class="promotion_item" style="background-image: url(images/promotion_item_bg.jpg);">
-			<h3>Токоограничивающие реакторы РТОС, РТСТ 6-220 кВ</h3>
-		        <div class="text">
-			    <time>дата окончания 13.01</time>
-			    <p>Токоограничивающие реакторы изготавливаются из прямоугольного провода АППТСД со стекловолокнистой и полиимидной изоляцией. В процессе намотки в несколько жил применяется транспонирование проводов для обеспечения равного контакта всех жил с магнитным полем рассеивания и равномерной плотности тока в реакторе.</p>
-			    <a href="#" class="button">Заказать</a>
-			    <a href="#">Перейти в раздел</a>
-			</div>
-		    </div>
-		    <div class="promotion_item" style="background-image: url(images/promotion_item_bg.jpg);">
-			<h3>Трансформаторы трёхфазные серий ТСЗГЛ, ТСЗН</h3>
-			<div class="text">
-			    <time>дата окончания 13.01</time>
-			    <p>Токоограничивающие реакторы изготавливаются из прямоугольного провода АППТСД со стекловолокнистой и полиимидной изоляцией. В процессе намотки в несколько жил применяется транспонирование проводов для обеспечения равного контакта всех жил с магнитным полем рассеивания и равномерной плотности тока в реакторе.</p>
-			    <a href="#" class="button">Заказать</a>
-			    <a href="#">Перейти в раздел</a>
-			</div>
-		    </div>
-		    <div class="promotion_item" style="background-image: url(images/promotion_item_bg.jpg);">
-			<h3>Вводно-распределительные устройства (ВРУ)</h3>
-			<div class="text">
-			    <time>дата окончания 13.01</time>
-			    <p>Токоограничивающие реакторы изготавливаются из прямоугольного провода АППТСД со стекловолокнистой и полиимидной изоляцией. В процессе намотки в несколько жил применяется транспонирование проводов для обеспечения равного контакта всех жил с магнитным полем рассеивания и равномерной плотности тока в реакторе.</p>
-			    <a href="#" class="button">Заказать</a>
-			    <a href="#">Перейти в раздел</a>
-			</div>
-		    </div>
-		</div>
-		
-	    </div>
-	</div>
-	<!-- end Акции -->
-	
-	
-	
-	<!-- Каталог -->
-	<div class="main_section" id="catalog">
-	    <div class="in">
-		<h2>Сопутствующие товары</h2>
-		
-		<div class="catalog slider">
-		    <div class="product_item">
-			<div class="product_item_in">
-			    <div class="img"><a href="#"><img src="images/main_screen_img2.png"><span class="hover">Быстрый просмотр</span></a></div>
-			    <h5>Высоковольтные</h5>
-			    <div class="text">
-				<p><span class="char">Мощность, кВА</span> <strong>160</strong></p>
-				<p><span class="char">Ток ХХ, %</span> <strong>2,5</strong></p>
-				<p><span class="char">Потери ХХ, Вт</span> <strong>820</strong></p>
-				<p><span class="char">Потери КЗ (при 115оС), Вт</span> <strong>2300</strong></p>
-				<p><span class="char">Напряжение КЗ, %</span> <strong>4,0</strong></p>
-				<p><a href="#">Подробнее</a></p>
-				<a class="button" href="#">Оставить заявку</a>
-			    </div>
-			</div>
-		    </div>
-		    <div class="product_item">
-			<div class="product_item_in">
-			    <div class="img"><a href="#"><img src="images/main_screen_img2.png"><span class="hover">Быстрый просмотр</span></a></div>
-			    <h5>Высоковольтные</h5>
-			    <div class="text">
-				<p><span class="char">Мощность, кВА</span> <strong>160</strong></p>
-				<p><span class="char">Ток ХХ, %</span> <strong>2,5</strong></p>
-				<p><span class="char">Потери ХХ, Вт</span> <strong>820</strong></p>
-				<p><span class="char">Потери КЗ (при 115оС), Вт</span> <strong>2300</strong></p>
-				<p><span class="char">Напряжение КЗ, %</span> <strong>4,0</strong></p>
-				<p><a href="#">Подробнее</a></p>
-				<a class="button" href="#">Оставить заявку</a>
-			    </div>
-			</div>
-		    </div>
-		    <div class="product_item">
-			<div class="product_item_in">
-			    <div class="img"><a href="#"><img src="images/main_screen_img2.png"><span class="hover">Быстрый просмотр</span></a></div>
-			    <h5>Высоковольтные</h5>
-			    <div class="text">
-				<p><span class="char">Мощность, кВА</span> <strong>160</strong></p>
-				<p><span class="char">Ток ХХ, %</span> <strong>2,5</strong></p>
-				<p><span class="char">Потери ХХ, Вт</span> <strong>820</strong></p>
-				<p><span class="char">Потери КЗ (при 115оС), Вт</span> <strong>2300</strong></p>
-				<p><span class="char">Напряжение КЗ, %</span> <strong>4,0</strong></p>
-				<p><a href="#">Подробнее</a></p>
-				<a class="button" href="#">Оставить заявку</a>
-			    </div>
-			</div>
-		    </div>
-		    <div class="product_item">
-			<div class="product_item_in">
-			    <div class="img"><a href="#"><img src="images/main_screen_img2.png"><span class="hover">Быстрый просмотр</span></a></div>
-			    <h5>Высоковольтные</h5>
-			    <div class="text">
-				<p><span class="char">Мощность, кВА</span> <strong>160</strong></p>
-				<p><span class="char">Ток ХХ, %</span> <strong>2,5</strong></p>
-				<p><span class="char">Потери ХХ, Вт</span> <strong>820</strong></p>
-				<p><span class="char">Потери КЗ (при 115оС), Вт</span> <strong>2300</strong></p>
-				<p><span class="char">Напряжение КЗ, %</span> <strong>4,0</strong></p>
-				<p><a href="#">Подробнее</a></p>
-				<a class="button" href="#">Оставить заявку</a>
-			    </div>
-			</div>
-		    </div>
-		    <div class="product_item">
-			<div class="product_item_in">
-			    <div class="img"><a href="#"><img src="images/main_screen_img2.png"><span class="hover">Быстрый просмотр</span></a></div>
-			    <h5>Высоковольтные</h5>
-			    <div class="text">
-				<p><span class="char">Мощность, кВА</span> <strong>160</strong></p>
-				<p><span class="char">Ток ХХ, %</span> <strong>2,5</strong></p>
-				<p><span class="char">Потери ХХ, Вт</span> <strong>820</strong></p>
-				<p><span class="char">Потери КЗ (при 115оС), Вт</span> <strong>2300</strong></p>
-				<p><span class="char">Напряжение КЗ, %</span> <strong>4,0</strong></p>
-				<p><a href="#">Подробнее</a></p>
-				<a class="button" href="#">Оставить заявку</a>
-			    </div>
-			</div>
-		    </div>
-		</div>
-		
-    		
-	    </div>
-	</div>
-	<!-- end Каталог -->
+            
         
-        
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW5waRqX6v-9byeN0ppkdgxdLG-8MotM4&callback=initMap"></script>
+	
+	
+	    <script>
+	    function initMap() {
+		var uluru = {lat: 57.6267609, lng: 39.8815532};
+		var map = new google.maps.Map(document.getElementById('map1'), {
+		  zoom: 15,
+		  center: uluru,
+		  styles: [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#333333"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#dedede"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dedede"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#e9e9e9"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }
+]
+		});
+		var marker = new google.maps.Marker({
+		  position: uluru,
+		  map: map,
+		  icon: {
+		    url:'images/icon_map.png',
+		    anchor: new google.maps.Point(22, 24)
+		  },
+		});
+		
+	    }
+	</script>
+            
+            
+            
+            
+            
+            
         <!-- подвал -->
 	<div id="pre_foo"></div>
 	<footer id="footer">

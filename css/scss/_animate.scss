@@ -460,19 +460,19 @@
   from { left: 160px; width: 0px; opacity: 0; }
   to { width: 160px; left: 0px; opacity: 1; }
 }
-
-#promotions .promotions_more .promotions_more_item:before { opacity: 0; }
-#promotions.animated .promotions_more .promotions_more_item:before {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  -webkit-animation-name: slider_menu_item_before;
-  animation-name: slider_menu_item_before;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+@media screen and (min-width: 1000px) {
+  #promotions .promotions_more .promotions_more_item:before { opacity: 0; }
+  #promotions.animated .promotions_more .promotions_more_item:before {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-name: slider_menu_item_before;
+    animation-name: slider_menu_item_before;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
 }
-
 
 #about.main_section h2 { opacity: 0; }
 #about.main_section.animated h2 { -webkit-animation-delay: 0.0s;  animation-delay: 0.0s; -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
