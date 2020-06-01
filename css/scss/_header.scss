@@ -123,7 +123,7 @@
 	position: relative;
 	z-index: 3;
 	padding: 5px 15px;
-	margin-right: -52px;
+	margin-right: -55px;
 	vertical-align: top;
 	@include transition(all);
 	    
@@ -1040,6 +1040,12 @@
     
     &.scroll {
 	padding-top: 50px;
+    }
+    &.scroll_up {
+	position: absolute;
+	top: auto;
+	bottom: 700px;
+	height: auto;
     }
 }
 

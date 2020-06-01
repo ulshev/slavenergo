@@ -31,7 +31,7 @@ $(document).ready(function() {
 	});
 	
 	// шапка при прокрутке
-	$(window).on('load scroll', function() {
+	$(document).on('load scroll', function() {
 	    if($(this).scrollTop() != 0) {
 		$('#header').addClass('scroll');
 	    } else {
@@ -43,6 +43,20 @@ $(document).ready(function() {
 	    } else {
 		$('#left_menu').removeClass('scroll');
 	    }
+	    
+	    /*if($(this).scrollTop() >= 5000) {
+		$('#left_menu').addClass('scroll_up');
+	    } else {
+		$('#left_menu').removeClass('scroll_up');
+	    }*/
+	    
+	    var documentHeight = $(this).height();
+	    //var percent = 100;
+	    if ($(this).scrollTop() >= (documentHeight-1420) ) {
+		$('#left_menu').addClass("scroll_up");
+	    } else if ($(this).scrollTop() < (documentHeight-1420)) {
+		$('#left_menu').removeClass("scroll_up");
+	     }
 	});
 
 	// класс меню с подменю
